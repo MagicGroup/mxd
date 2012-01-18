@@ -1,0 +1,456 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-11-29 16:24+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: main.cpp:27 mxd.cpp:111 rc.cpp:155
+#, no-c-format
+msgid "Magic xDSL Dialer"
+msgstr ""
+
+#: main.cpp:29
+msgid ""
+"Magic xDSL Dialer\n"
+"\n"
+"A convenient tool to handle \"Roaring Penguin PPPoE\" \n"
+"extending from \"RP-PPPoEK\" project by Christian Nitschkowski."
+msgstr ""
+
+#: main.cpp:36
+msgid "Pop up setup window only."
+msgstr ""
+
+#: main.cpp:37
+msgid "Connect xDSL directly."
+msgstr ""
+
+#: main.cpp:38
+msgid "Stop xDSL connection."
+msgstr ""
+
+#: main.cpp:47
+msgid "Author of \"Roaring Penguin PPPoE Kontrol\"."
+msgstr ""
+
+#: main.cpp:48
+msgid "Author of \"KNetStats\"."
+msgstr ""
+
+#: mxd.cpp:95 mxd.cpp:164 mxd.cpp:217
+msgid "Connect"
+msgstr ""
+
+#: mxd.cpp:96 mxd.cpp:169 mxd.cpp:231
+msgid "Disconnect"
+msgstr ""
+
+#: mxd.cpp:97
+msgid "Show IP-address"
+msgstr ""
+
+#: mxd.cpp:99
+msgid "Settings"
+msgstr ""
+
+#: mxd.cpp:164
+msgid "Trying to connect"
+msgstr ""
+
+#: mxd.cpp:169
+msgid "Trying to disconnect"
+msgstr ""
+
+#: mxd.cpp:195
+msgid ""
+"Couldn't find an IP-address for %1.\n"
+"Please make sure you're connected."
+msgstr ""
+
+#: mxd.cpp:210
+msgid "Connected successfully"
+msgstr ""
+
+#: mxd.cpp:213
+msgid "Couldn't connect"
+msgstr ""
+
+#: mxd.cpp:224
+msgid "Disconnected successfully"
+msgstr ""
+
+#: mxd.cpp:227
+msgid "Couldn't disconnect"
+msgstr ""
+
+#: mxd.cpp:262
+msgid "Error opening /proc/net/dev!"
+msgstr ""
+
+#: mxd.cpp:325
+msgid "%1 is active"
+msgstr ""
+
+#: mxd.cpp:345
+msgid "%1 is inactive"
+msgstr ""
+
+#: mxd.cpp:377 statistics.cpp:45
+msgid "Connected"
+msgstr ""
+
+#: mxd.cpp:377 rc.cpp:197 statistics.cpp:45
+#, no-c-format
+msgid "Disconnected"
+msgstr ""
+
+#: mxd.cpp:381 rc.cpp:170 rc.cpp:185
+#, no-c-format
+msgid "Upload speed:"
+msgstr ""
+
+#: mxd.cpp:382 rc.cpp:173 rc.cpp:188
+#, no-c-format
+msgid "Download speed:"
+msgstr ""
+
+#: rc.cpp:3
+#, no-c-format
+msgid "C&ustom"
+msgstr ""
+
+#: rc.cpp:6
+#, no-c-format
+msgid "Magic xDSL configure"
+msgstr ""
+
+#: rc.cpp:9
+#, no-c-format
+msgid "T&&&&&ab"
+msgstr ""
+
+#: rc.cpp:12
+#, no-c-format
+msgid "Login Settings"
+msgstr ""
+
+#: rc.cpp:15
+#, no-c-format
+msgid "User Name:"
+msgstr ""
+
+#: rc.cpp:18
+#, no-c-format
+msgid "Password:"
+msgstr ""
+
+#: rc.cpp:21
+#, no-c-format
+msgid "PPPoE user name.  You may have to supply \\\"@provider.com\\\"."
+msgstr ""
+
+#: rc.cpp:24
+#, no-c-format
+msgid "Network Settings"
+msgstr ""
+
+#: rc.cpp:27
+#, no-c-format
+msgid "Ethernet Interface:"
+msgstr ""
+
+#: rc.cpp:30
+#, no-c-format
+msgid "Ethernet card connected to DSL modem"
+msgstr ""
+
+#: rc.cpp:33
+#, no-c-format
+msgid "DNS Type:"
+msgstr ""
+
+#: rc.cpp:36
+#, no-c-format
+msgid "obtain from server"
+msgstr ""
+
+#: rc.cpp:39
+#, no-c-format
+msgid "specify"
+msgstr ""
+
+#: rc.cpp:42
+#, no-c-format
+msgid "do not adjust"
+msgstr ""
+
+#: rc.cpp:45
+#, no-c-format
+msgid "Primary DNS:"
+msgstr ""
+
+#: rc.cpp:48
+#, no-c-format
+msgid "Secondary DNS:"
+msgstr ""
+
+#: rc.cpp:51
+#, no-c-format
+msgid "Other Settings"
+msgstr ""
+
+#: rc.cpp:54
+#, no-c-format
+msgid "Connect automatically when &KDE starts"
+msgstr ""
+
+#: rc.cpp:57
+#, no-c-format
+msgid "Alt+K"
+msgstr ""
+
+#: rc.cpp:60
+#, no-c-format
+msgid "St&op connection when program exits"
+msgstr ""
+
+#: rc.cpp:63 rc.cpp:113
+#, no-c-format
+msgid "Alt+O"
+msgstr ""
+
+#: rc.cpp:66
+#, no-c-format
+msgid "Ta&&&&&&&b"
+msgstr ""
+
+#: rc.cpp:69
+#, no-c-format
+msgid ""
+"Followings are advance settings. Please <font color=\"#ff0000\"><b>Do Not</"
+"b></font> change the default values if you are not sure what the item really "
+"dose."
+msgstr ""
+
+#: rc.cpp:72
+#, no-c-format
+msgid "&Use Synchronous PPP"
+msgstr ""
+
+#: rc.cpp:75 rc.cpp:140
+#, no-c-format
+msgid "Alt+U"
+msgstr ""
+
+#: rc.cpp:78
+#, no-c-format
+msgid ""
+"Using synchronous PPP is much easier on CPU usage, but may not work for "
+"you.  \n"
+"It is safer to use \"no\", but you may want to experiment with \"yes\".  "
+"\"yes\" is generally\n"
+"safe on Linux machines with the n_hdlc line discipline; unsafe on others."
+msgstr ""
+
+#: rc.cpp:83
+#, no-c-format
+msgid "Service Name:"
+msgstr ""
+
+#: rc.cpp:86
+#, no-c-format
+msgid "AC Name:"
+msgstr ""
+
+#: rc.cpp:89
+#, no-c-format
+msgid ""
+"Enter service name if required. Most ISPs do not require this. Try leaving "
+"it blank."
+msgstr ""
+
+#: rc.cpp:92
+#, no-c-format
+msgid ""
+"Enter access concentrator name if required. Most ISPs do not require this. "
+"Try leaving it blank."
+msgstr ""
+
+#: rc.cpp:95
+#, no-c-format
+msgid "PPPoE Args:"
+msgstr ""
+
+#: rc.cpp:98
+#, no-c-format
+msgid "PPPD Args:"
+msgstr ""
+
+#: rc.cpp:101
+#, no-c-format
+msgid "Any extra arguments to pass to pppoe.  Normally, use a blank string."
+msgstr ""
+
+#: rc.cpp:104
+#, no-c-format
+msgid "Any extra arguments to pass to pppd.  Normally, use a blank string."
+msgstr ""
+
+#: rc.cpp:107
+#, no-c-format
+msgid "Firewalling"
+msgstr ""
+
+#: rc.cpp:110
+#, no-c-format
+msgid "N&one"
+msgstr ""
+
+#: rc.cpp:116
+#, no-c-format
+msgid ""
+"Select None if you already have your own firewall rules or want to run "
+"servers."
+msgstr ""
+
+#: rc.cpp:119
+#, no-c-format
+msgid "Sta&nd Alone"
+msgstr ""
+
+#: rc.cpp:122 rc.cpp:152
+#, no-c-format
+msgid "Alt+N"
+msgstr ""
+
+#: rc.cpp:125
+#, no-c-format
+msgid "A stand-alone machine."
+msgstr ""
+
+#: rc.cpp:128
+#, no-c-format
+msgid "&Masquerading"
+msgstr ""
+
+#: rc.cpp:131
+#, no-c-format
+msgid "Alt+M"
+msgstr ""
+
+#: rc.cpp:134
+#, no-c-format
+msgid "A gateway machine used for Internet sharing."
+msgstr ""
+
+#: rc.cpp:137
+#, no-c-format
+msgid "Defa&ult"
+msgstr ""
+
+#: rc.cpp:143
+#, no-c-format
+msgid "Sa&ve"
+msgstr ""
+
+#: rc.cpp:146
+#, no-c-format
+msgid "Alt+V"
+msgstr ""
+
+#: rc.cpp:149
+#, no-c-format
+msgid "Ca&ncel"
+msgstr ""
+
+#: rc.cpp:158
+#, no-c-format
+msgid "O&k"
+msgstr ""
+
+#: rc.cpp:161
+#, no-c-format
+msgid "Packets"
+msgstr ""
+
+#: rc.cpp:164 rc.cpp:179
+#, no-c-format
+msgid "Received:"
+msgstr ""
+
+#: rc.cpp:167 rc.cpp:182
+#, no-c-format
+msgid "Transmited:"
+msgstr ""
+
+#: rc.cpp:176
+#, no-c-format
+msgid "Bytes"
+msgstr ""
+
+#: rc.cpp:191
+#, no-c-format
+msgid "..."
+msgstr ""
+
+#: rc.cpp:194
+#, no-c-format
+msgid "Status:"
+msgstr ""
+
+#: rc.cpp:200
+#, no-c-format
+msgid "IP Address:"
+msgstr ""
+
+#: rc.cpp:203
+#, no-c-format
+msgid "0.0.0.0"
+msgstr ""
+
+#: settingdialog.cpp:475
+msgid "Basic"
+msgstr ""
+
+#: settingdialog.cpp:476
+msgid "Advance"
+msgstr ""
+
+#: settingdialog.cpp:542
+msgid ""
+"Configure has been changed, closing dialog will\n"
+" lose all changes, are you sure?"
+msgstr ""
+
+#: settingdialog.cpp:706
+msgid ""
+"Magic xDSL Dialer. A convenient tool to handle \"Roaring Penguin PPPoE\"."
+msgstr ""
+
+#: statistics.cpp:34
+msgid "Statistics for %1"
+msgstr ""
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr ""
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr ""

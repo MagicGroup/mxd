@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=mxd
+GenericName=xDSL Dialer
+GenericName[zh_CN]=xDSL 拨号器
+Exec=mxd
+Icon=mxd
+Type=Application
+Comment=Magic xDSL Dialer
+Comment[zh_CN]=Magic xDSL 拨号程序
+Catetories=Qt;KDE;Network;

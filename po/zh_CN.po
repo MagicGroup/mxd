@@ -1,0 +1,468 @@
+# translation of zh_CN.po to
+# translation of zh_CN.GB2312.po to
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# yunfan <yunfan_zg@163.com>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: zh_CN\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-11-29 16:24+0800\n"
+"PO-Revision-Date: 2005-11-29 16:40+0800\n"
+"Last-Translator: yunfan <yunfan_zg@163.com>\n"
+"Language-Team:  <zh@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+
+#: main.cpp:27 mxd.cpp:111 rc.cpp:155
+#, no-c-format
+msgid "Magic xDSL Dialer"
+msgstr "Magic xDSL 拨号器"
+
+#: main.cpp:29
+msgid ""
+"Magic xDSL Dialer\n"
+"\n"
+"A convenient tool to handle \"Roaring Penguin PPPoE\" \n"
+"extending from \"RP-PPPoEK\" project by Christian Nitschkowski."
+msgstr ""
+"Magic xDSL 拨号器\n"
+"\n"
+"一个方便的操作 \"Roaring Penguin PPPoE\" 的小程序，\n"
+"扩展自 Christian Nitschkowski 的 \"RP-PPPoEK\" 程序。"
+
+#: main.cpp:36
+msgid "Pop up setup window only."
+msgstr "只弹出设置窗口。"
+
+#: main.cpp:37
+msgid "Connect xDSL directly."
+msgstr "直接连接 xDSL。"
+
+#: main.cpp:38
+msgid "Stop xDSL connection."
+msgstr "停止 xDSL 连接。"
+
+#: main.cpp:47
+msgid "Author of \"Roaring Penguin PPPoE Kontrol\"."
+msgstr "“Roaring Penguin PPPoE Kontrol” 的作者。"
+
+#: main.cpp:48
+msgid "Author of \"KNetStats\"."
+msgstr "“KNetStats” 的作者。"
+
+#: mxd.cpp:95 mxd.cpp:164 mxd.cpp:217
+msgid "Connect"
+msgstr "连接"
+
+#: mxd.cpp:96 mxd.cpp:169 mxd.cpp:231
+msgid "Disconnect"
+msgstr "断开"
+
+#: mxd.cpp:97
+msgid "Show IP-address"
+msgstr "显示 IP 地址"
+
+#: mxd.cpp:99
+msgid "Settings"
+msgstr "拨号设置"
+
+#: mxd.cpp:164
+msgid "Trying to connect"
+msgstr "尝试连接"
+
+#: mxd.cpp:169
+msgid "Trying to disconnect"
+msgstr "尝试断开"
+
+#: mxd.cpp:195
+msgid ""
+"Couldn't find an IP-address for %1.\n"
+"Please make sure you're connected."
+msgstr ""
+"不能发现 %1 的 IP 地址，\n"
+"请确认是否已连接上。"
+
+#: mxd.cpp:210
+msgid "Connected successfully"
+msgstr "成功连接"
+
+#: mxd.cpp:213
+msgid "Couldn't connect"
+msgstr "无法连接"
+
+#: mxd.cpp:224
+msgid "Disconnected successfully"
+msgstr "成功断开"
+
+#: mxd.cpp:227
+msgid "Couldn't disconnect"
+msgstr "无法断开"
+
+#: mxd.cpp:262
+msgid "Error opening /proc/net/dev!"
+msgstr "打开 /proc/net/dev 错误！"
+
+#: mxd.cpp:325
+msgid "%1 is active"
+msgstr "%1 是活动的"
+
+#: mxd.cpp:345
+msgid "%1 is inactive"
+msgstr "%1 是不活动的"
+
+#: mxd.cpp:377 statistics.cpp:45
+msgid "Connected"
+msgstr "已连接"
+
+#: mxd.cpp:377 rc.cpp:197 statistics.cpp:45
+#, no-c-format
+msgid "Disconnected"
+msgstr "已断开"
+
+#: mxd.cpp:381 rc.cpp:170 rc.cpp:185
+#, no-c-format
+msgid "Upload speed:"
+msgstr "上传速度："
+
+#: mxd.cpp:382 rc.cpp:173 rc.cpp:188
+#, no-c-format
+msgid "Download speed:"
+msgstr "下载速度："
+
+#: rc.cpp:3
+#, no-c-format
+msgid "C&ustom"
+msgstr "定制(&u)"
+
+#: rc.cpp:6
+#, no-c-format
+msgid "Magic xDSL configure"
+msgstr "Magic xDSL 配置"
+
+#: rc.cpp:9
+#, no-c-format
+msgid "T&&&&&ab"
+msgstr "T&ab"
+
+#: rc.cpp:12
+#, no-c-format
+msgid "Login Settings"
+msgstr "登录设置"
+
+#: rc.cpp:15
+#, no-c-format
+msgid "User Name:"
+msgstr "用户名："
+
+#: rc.cpp:18
+#, no-c-format
+msgid "Password:"
+msgstr "密码："
+
+#: rc.cpp:21
+#, no-c-format
+msgid "PPPoE user name.  You may have to supply \\\"@provider.com\\\"."
+msgstr "PPPoE 用户名。您可能还要填上 “@provider.com”。"
+
+#: rc.cpp:24
+#, no-c-format
+msgid "Network Settings"
+msgstr "网络设置"
+
+#: rc.cpp:27
+#, no-c-format
+msgid "Ethernet Interface:"
+msgstr "网卡接口："
+
+#: rc.cpp:30
+#, no-c-format
+msgid "Ethernet card connected to DSL modem"
+msgstr "连接到 DSL 调制解调器的网卡"
+
+#: rc.cpp:33
+#, no-c-format
+msgid "DNS Type:"
+msgstr "域名解析类型："
+
+#: rc.cpp:36
+#, no-c-format
+msgid "obtain from server"
+msgstr "从服务器获取"
+
+#: rc.cpp:39
+#, no-c-format
+msgid "specify"
+msgstr "用户指定"
+
+#: rc.cpp:42
+#, no-c-format
+msgid "do not adjust"
+msgstr "不调整"
+
+#: rc.cpp:45
+#, no-c-format
+msgid "Primary DNS:"
+msgstr "主域名解析服务器："
+
+#: rc.cpp:48
+#, no-c-format
+msgid "Secondary DNS:"
+msgstr "从域名解析服务器："
+
+#: rc.cpp:51
+#, no-c-format
+msgid "Other Settings"
+msgstr "其它设置"
+
+#: rc.cpp:54
+#, no-c-format
+msgid "Connect automatically when &KDE starts"
+msgstr "在进入 KDE 时自动启动"
+
+#: rc.cpp:57
+#, no-c-format
+msgid "Alt+K"
+msgstr "Alt+K"
+
+#: rc.cpp:60
+#, no-c-format
+msgid "St&op connection when program exits"
+msgstr "在程序退出时断开连接"
+
+#: rc.cpp:63 rc.cpp:113
+#, no-c-format
+msgid "Alt+O"
+msgstr "Alt+O"
+
+#: rc.cpp:66
+#, no-c-format
+msgid "Ta&&&&&&&b"
+msgstr "Ta&b"
+
+#: rc.cpp:69
+#, no-c-format
+msgid ""
+"Followings are advance settings. Please <font color=\"#ff0000\"><b>Do Not</"
+"b></font> change the default values if you are not sure what the item really "
+"dose."
+msgstr "以下是高级设置。 如果您不确定下面子项的含义， 请 <font color=\"#ff0000\"><b>不要</b></font> 更改默认值。"
+
+#: rc.cpp:72
+#, no-c-format
+msgid "&Use Synchronous PPP"
+msgstr "使用同步 PPP(&U)"
+
+#: rc.cpp:75 rc.cpp:140
+#, no-c-format
+msgid "Alt+U"
+msgstr "Alt+U"
+
+#: rc.cpp:78
+#, no-c-format
+msgid ""
+"Using synchronous PPP is much easier on CPU usage, but may not work for "
+"you.  \n"
+"It is safer to use \"no\", but you may want to experiment with \"yes\".  "
+"\"yes\" is generally\n"
+"safe on Linux machines with the n_hdlc line discipline; unsafe on others."
+msgstr ""
+"使用同步 PPP 可以减少 CPU 的使用率， 但是在您的机器上不能保证有效果.  \n"
+"选则 \"否\" 是安全的， 但是您可能想体验一下选择 \"是\" 的效果。  "
+"\" 是 \" 一般而言对于有 n_hdlc 行约束的 Linux 的机器是安全的, 其它机器有可能就不安全了。"
+
+#: rc.cpp:83
+#, no-c-format
+msgid "Service Name:"
+msgstr "服务名称："
+
+#: rc.cpp:86
+#, no-c-format
+msgid "AC Name:"
+msgstr "AC 名称："
+
+#: rc.cpp:89
+#, no-c-format
+msgid ""
+"Enter service name if required. Most ISPs do not require this. Try leaving "
+"it blank."
+msgstr "如果需要， 请输入服务名称（service name）。大多数互联网服务提供商并不需要这项。请尝试留空。"
+
+#: rc.cpp:92
+#, no-c-format
+msgid ""
+"Enter access concentrator name if required. Most ISPs do not require this. "
+"Try leaving it blank."
+msgstr "如果需要， 请输入访问集中器名称（access concentrator）。大多数互联网服务提供商并不需要这项。请尝试留空。"
+
+#: rc.cpp:95
+#, no-c-format
+msgid "PPPoE Args:"
+msgstr "PPPoE 参数："
+
+#: rc.cpp:98
+#, no-c-format
+msgid "PPPD Args:"
+msgstr "PPPD 参数："
+
+#: rc.cpp:101
+#, no-c-format
+msgid "Any extra arguments to pass to pppoe.  Normally, use a blank string."
+msgstr "任何额外的 pppoe 参数。 一般情况下，使用一个空字符串。"
+
+#: rc.cpp:104
+#, no-c-format
+msgid "Any extra arguments to pass to pppd.  Normally, use a blank string."
+msgstr "任何额外的 pppd 参数。 一般情况下，使用一个空字符串。"
+
+#: rc.cpp:107
+#, no-c-format
+msgid "Firewalling"
+msgstr "防火墙"
+
+#: rc.cpp:110
+#, no-c-format
+msgid "N&one"
+msgstr "无(&o)"
+
+#: rc.cpp:116
+#, no-c-format
+msgid ""
+"Select None if you already have your own firewall rules or want to run "
+"servers."
+msgstr "如果您已经有自己的防火墙规则，或者想运行服务器， 那么请选择 无。"
+
+#: rc.cpp:119
+#, no-c-format
+msgid "Sta&nd Alone"
+msgstr "独立(&n)"
+
+#: rc.cpp:122 rc.cpp:152
+#, no-c-format
+msgid "Alt+N"
+msgstr "Alt+N"
+
+#: rc.cpp:125
+#, no-c-format
+msgid "A stand-alone machine."
+msgstr "一台独立的机器。"
+
+#: rc.cpp:128
+#, no-c-format
+msgid "&Masquerading"
+msgstr "共享(&M)"
+
+#: rc.cpp:131
+#, no-c-format
+msgid "Alt+M"
+msgstr "Alt+M"
+
+#: rc.cpp:134
+#, no-c-format
+msgid "A gateway machine used for Internet sharing."
+msgstr "用在做互联网共享的网关机器上。"
+
+#: rc.cpp:137
+#, no-c-format
+msgid "Defa&ult"
+msgstr "默认(&u)"
+
+#: rc.cpp:143
+#, no-c-format
+msgid "Sa&ve"
+msgstr "保存(&v)"
+
+#: rc.cpp:146
+#, no-c-format
+msgid "Alt+V"
+msgstr "Alt+V"
+
+#: rc.cpp:149
+#, no-c-format
+msgid "Ca&ncel"
+msgstr "取消(&n)"
+
+#: rc.cpp:158
+#, no-c-format
+msgid "O&k"
+msgstr "好(&k)"
+
+#: rc.cpp:161
+#, no-c-format
+msgid "Packets"
+msgstr "包"
+
+#: rc.cpp:164 rc.cpp:179
+#, no-c-format
+msgid "Received:"
+msgstr "接收："
+
+#: rc.cpp:167 rc.cpp:182
+#, no-c-format
+msgid "Transmited:"
+msgstr "传送："
+
+#: rc.cpp:176
+#, no-c-format
+msgid "Bytes"
+msgstr "字节"
+
+#: rc.cpp:191
+#, no-c-format
+msgid "..."
+msgstr "..."
+
+#: rc.cpp:194
+#, no-c-format
+msgid "Status:"
+msgstr "状态："
+
+#: rc.cpp:200
+#, no-c-format
+msgid "IP Address:"
+msgstr "IP 地址："
+
+#: rc.cpp:203
+#, no-c-format
+msgid "0.0.0.0"
+msgstr "0.0.0.0"
+
+#: settingdialog.cpp:475
+msgid "Basic"
+msgstr "基本设置"
+
+#: settingdialog.cpp:476
+msgid "Advance"
+msgstr "高级设置"
+
+#: settingdialog.cpp:542
+msgid ""
+"Configure has been changed, closing dialog will\n"
+" lose all changes, are you sure?"
+msgstr ""
+"配置已经更改， 关闭窗口将\n"
+"丢失所有的更改， 您确定吗？"
+
+#: settingdialog.cpp:706
+msgid "Magic xDSL Dialer. A convenient tool to handle \"Roaring Penguin PPPoE\"."
+msgstr "Magic xDSL 拨号器。 一个方便的控制 “Roaring Penguin PPPoE” 的小工具。"
+
+#: statistics.cpp:34
+msgid "Statistics for %1"
+msgstr "%1 的统计数据"
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr "云帆"
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr "yunfan_zg@163.com"
+

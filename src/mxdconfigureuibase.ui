@@ -1,0 +1,718 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>MxDConfigureUIBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>MxDConfigureUIBase</cstring>
+    </property>
+    <property name="enabled">
+        <bool>true</bool>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>345</width>
+            <height>466</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Magic xDSL configure</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="KTabWidget">
+            <property name="name">
+                <cstring>ktabMain</cstring>
+            </property>
+            <property name="currentPage">
+                <number>0</number>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>TabPage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>T&amp;ab</string>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLayoutWidget" row="0" column="0">
+                        <property name="name">
+                            <cstring>layout23</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>gbLogin</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Login Settings</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLayoutWidget" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>layout11</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLayoutWidget">
+                                                <property name="name">
+                                                    <cstring>layout9</cstring>
+                                                </property>
+                                                <vbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QLabel">
+                                                        <property name="name">
+                                                            <cstring>lblUsername</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>User Name:</string>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QLabel">
+                                                        <property name="name">
+                                                            <cstring>lblpassword</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Password:</string>
+                                                        </property>
+                                                    </widget>
+                                                </vbox>
+                                            </widget>
+                                            <widget class="QLayoutWidget">
+                                                <property name="name">
+                                                    <cstring>layout10</cstring>
+                                                </property>
+                                                <vbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QLineEdit">
+                                                        <property name="name">
+                                                            <cstring>leUsername</cstring>
+                                                        </property>
+                                                        <property name="whatsThis" stdset="0">
+                                                            <string>PPPoE user name.  You may have to supply \"@provider.com\".</string>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QLineEdit">
+                                                        <property name="name">
+                                                            <cstring>lePassword</cstring>
+                                                        </property>
+                                                        <property name="echoMode">
+                                                            <enum>Password</enum>
+                                                        </property>
+                                                    </widget>
+                                                </vbox>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>gbNetwork</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Network Settings</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLayoutWidget" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>layout21</cstring>
+                                        </property>
+                                        <vbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLayoutWidget">
+                                                <property name="name">
+                                                    <cstring>layout6</cstring>
+                                                </property>
+                                                <hbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QLabel">
+                                                        <property name="name">
+                                                            <cstring>lblEthCard</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Ethernet Interface:</string>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QComboBox">
+                                                        <property name="name">
+                                                            <cstring>cbbEth</cstring>
+                                                        </property>
+                                                        <property name="whatsThis" stdset="0">
+                                                            <string>Ethernet card connected to DSL modem</string>
+                                                        </property>
+                                                    </widget>
+                                                </hbox>
+                                            </widget>
+                                            <widget class="QLayoutWidget">
+                                                <property name="name">
+                                                    <cstring>layout15</cstring>
+                                                </property>
+                                                <hbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QLabel">
+                                                        <property name="name">
+                                                            <cstring>lblDNS</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>DNS Type:</string>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QComboBox">
+                                                        <item>
+                                                            <property name="text">
+                                                                <string>obtain from server</string>
+                                                            </property>
+                                                        </item>
+                                                        <item>
+                                                            <property name="text">
+                                                                <string>specify</string>
+                                                            </property>
+                                                        </item>
+                                                        <item>
+                                                            <property name="text">
+                                                                <string>do not adjust</string>
+                                                            </property>
+                                                        </item>
+                                                        <property name="name">
+                                                            <cstring>cbbDNS</cstring>
+                                                        </property>
+                                                    </widget>
+                                                </hbox>
+                                            </widget>
+                                            <widget class="Line">
+                                                <property name="name">
+                                                    <cstring>line2</cstring>
+                                                </property>
+                                                <property name="frameShape">
+                                                    <enum>HLine</enum>
+                                                </property>
+                                                <property name="frameShadow">
+                                                    <enum>Sunken</enum>
+                                                </property>
+                                                <property name="orientation">
+                                                    <enum>Horizontal</enum>
+                                                </property>
+                                            </widget>
+                                            <widget class="QFrame">
+                                                <property name="name">
+                                                    <cstring>fraDNS</cstring>
+                                                </property>
+                                                <property name="enabled">
+                                                    <bool>false</bool>
+                                                </property>
+                                                <property name="frameShape">
+                                                    <enum>NoFrame</enum>
+                                                </property>
+                                                <property name="frameShadow">
+                                                    <enum>Raised</enum>
+                                                </property>
+                                                <grid>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QLayoutWidget" row="0" column="0">
+                                                        <property name="name">
+                                                            <cstring>layout18</cstring>
+                                                        </property>
+                                                        <hbox>
+                                                            <property name="name">
+                                                                <cstring>unnamed</cstring>
+                                                            </property>
+                                                            <widget class="QLayoutWidget">
+                                                                <property name="name">
+                                                                    <cstring>layout16</cstring>
+                                                                </property>
+                                                                <vbox>
+                                                                    <property name="name">
+                                                                        <cstring>unnamed</cstring>
+                                                                    </property>
+                                                                    <widget class="QLabel">
+                                                                        <property name="name">
+                                                                            <cstring>lblDNS1</cstring>
+                                                                        </property>
+                                                                        <property name="text">
+                                                                            <string>Primary DNS:</string>
+                                                                        </property>
+                                                                    </widget>
+                                                                    <widget class="QLabel">
+                                                                        <property name="name">
+                                                                            <cstring>lblDNS2</cstring>
+                                                                        </property>
+                                                                        <property name="text">
+                                                                            <string>Secondary DNS:</string>
+                                                                        </property>
+                                                                    </widget>
+                                                                </vbox>
+                                                            </widget>
+                                                            <widget class="QLayoutWidget">
+                                                                <property name="name">
+                                                                    <cstring>layout17</cstring>
+                                                                </property>
+                                                                <vbox>
+                                                                    <property name="name">
+                                                                        <cstring>unnamed</cstring>
+                                                                    </property>
+                                                                    <widget class="QLineEdit">
+                                                                        <property name="name">
+                                                                            <cstring>leDNS1</cstring>
+                                                                        </property>
+                                                                        <property name="enabled">
+                                                                            <bool>false</bool>
+                                                                        </property>
+                                                                    </widget>
+                                                                    <widget class="QLineEdit">
+                                                                        <property name="name">
+                                                                            <cstring>leDNS2</cstring>
+                                                                        </property>
+                                                                        <property name="enabled">
+                                                                            <bool>false</bool>
+                                                                        </property>
+                                                                    </widget>
+                                                                </vbox>
+                                                            </widget>
+                                                        </hbox>
+                                                    </widget>
+                                                </grid>
+                                            </widget>
+                                        </vbox>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>gbOthers</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Other Settings</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLayoutWidget" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>layout22</cstring>
+                                        </property>
+                                        <vbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QCheckBox">
+                                                <property name="name">
+                                                    <cstring>chbAutoStart</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Connect automatically when &amp;KDE starts</string>
+                                                </property>
+                                                <property name="accel">
+                                                    <string>Alt+K</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QCheckBox">
+                                                <property name="name">
+                                                    <cstring>chkbStopOnExit</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>St&amp;op connection when program exits</string>
+                                                </property>
+                                                <property name="accel">
+                                                    <string>Alt+O</string>
+                                                </property>
+                                            </widget>
+                                        </vbox>
+                                    </widget>
+                                </grid>
+                            </widget>
+                        </vbox>
+                    </widget>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>TabPage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Ta&amp;b</string>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLayoutWidget" row="0" column="0">
+                        <property name="name">
+                            <cstring>layout39</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>lblNotice</cstring>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>32767</width>
+                                        <height>100</height>
+                                    </size>
+                                </property>
+                                <property name="paletteBackgroundColor">
+                                    <color>
+                                        <red>255</red>
+                                        <green>255</green>
+                                        <blue>127</blue>
+                                    </color>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>Box</enum>
+                                </property>
+                                <property name="text">
+                                    <string>Followings are advance settings. Please &lt;font color="#ff0000"&gt;&lt;b&gt;Do Not&lt;/b&gt;&lt;/font&gt; change the default values if you are not sure what the item really dose.</string>
+                                </property>
+                                <property name="alignment">
+                                    <set>WordBreak|AlignVCenter</set>
+                                </property>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>layout38</cstring>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>10</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>10</number>
+                                    </property>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>rbtnSyn</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>&amp;Use Synchronous PPP</string>
+                                        </property>
+                                        <property name="accel">
+                                            <string>Alt+U</string>
+                                        </property>
+                                        <property name="checked">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Using synchronous PPP is much easier on CPU usage, but may not work for you.  
+It is safer to use "no", but you may want to experiment with "yes".  "yes" is generally
+safe on Linux machines with the n_hdlc line discipline; unsafe on others.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLayoutWidget">
+                                        <property name="name">
+                                            <cstring>layout30</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLayoutWidget">
+                                                <property name="name">
+                                                    <cstring>layout28</cstring>
+                                                </property>
+                                                <vbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QLabel">
+                                                        <property name="name">
+                                                            <cstring>lblServiceName</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Service Name:</string>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QLabel">
+                                                        <property name="name">
+                                                            <cstring>textLabel9</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>AC Name:</string>
+                                                        </property>
+                                                    </widget>
+                                                </vbox>
+                                            </widget>
+                                            <widget class="QLayoutWidget">
+                                                <property name="name">
+                                                    <cstring>layout29</cstring>
+                                                </property>
+                                                <vbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QLineEdit">
+                                                        <property name="name">
+                                                            <cstring>leServiceName</cstring>
+                                                        </property>
+                                                        <property name="whatsThis" stdset="0">
+                                                            <string>Enter service name if required. Most ISPs do not require this. Try leaving it blank.</string>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QLineEdit">
+                                                        <property name="name">
+                                                            <cstring>leACName</cstring>
+                                                        </property>
+                                                        <property name="whatsThis" stdset="0">
+                                                            <string>Enter access concentrator name if required. Most ISPs do not require this. Try leaving it blank.</string>
+                                                        </property>
+                                                    </widget>
+                                                </vbox>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="Line">
+                                        <property name="name">
+                                            <cstring>line3</cstring>
+                                        </property>
+                                        <property name="frameShape">
+                                            <enum>HLine</enum>
+                                        </property>
+                                        <property name="frameShadow">
+                                            <enum>Sunken</enum>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLayoutWidget">
+                                        <property name="name">
+                                            <cstring>layout33</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLayoutWidget">
+                                                <property name="name">
+                                                    <cstring>layout31</cstring>
+                                                </property>
+                                                <vbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QLabel">
+                                                        <property name="name">
+                                                            <cstring>lblPPPoEExtra</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>PPPoE Args:</string>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QLabel">
+                                                        <property name="name">
+                                                            <cstring>lblPPPDExtra</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>PPPD Args:</string>
+                                                        </property>
+                                                    </widget>
+                                                </vbox>
+                                            </widget>
+                                            <widget class="QLayoutWidget">
+                                                <property name="name">
+                                                    <cstring>layout32</cstring>
+                                                </property>
+                                                <vbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QLineEdit">
+                                                        <property name="name">
+                                                            <cstring>lePPPoEExtra</cstring>
+                                                        </property>
+                                                        <property name="whatsThis" stdset="0">
+                                                            <string>Any extra arguments to pass to pppoe.  Normally, use a blank string.</string>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QLineEdit">
+                                                        <property name="name">
+                                                            <cstring>lePPPDExtra</cstring>
+                                                        </property>
+                                                        <property name="whatsThis" stdset="0">
+                                                            <string>Any extra arguments to pass to pppd.  Normally, use a blank string.</string>
+                                                        </property>
+                                                    </widget>
+                                                </vbox>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QButtonGroup">
+                                        <property name="name">
+                                            <cstring>bgrpFireWall</cstring>
+                                        </property>
+                                        <property name="title">
+                                            <string>Firewalling</string>
+                                        </property>
+                                        <grid>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLayoutWidget" row="0" column="0">
+                                                <property name="name">
+                                                    <cstring>layout25</cstring>
+                                                </property>
+                                                <hbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QRadioButton">
+                                                        <property name="name">
+                                                            <cstring>rbtnFireWallNone</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>N&amp;one</string>
+                                                        </property>
+                                                        <property name="accel">
+                                                            <string>Alt+O</string>
+                                                        </property>
+                                                        <property name="checked">
+                                                            <bool>true</bool>
+                                                        </property>
+                                                        <property name="whatsThis" stdset="0">
+                                                            <string>Select None if you already have your own firewall rules or want to run servers.</string>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QRadioButton">
+                                                        <property name="name">
+                                                            <cstring>rbtnFireWallStandAlone</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Sta&amp;nd Alone</string>
+                                                        </property>
+                                                        <property name="accel">
+                                                            <string>Alt+N</string>
+                                                        </property>
+                                                        <property name="whatsThis" stdset="0">
+                                                            <string>A stand-alone machine.</string>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QRadioButton">
+                                                        <property name="name">
+                                                            <cstring>rbtnFireWallMasquerade</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>&amp;Masquerading</string>
+                                                        </property>
+                                                        <property name="accel">
+                                                            <string>Alt+M</string>
+                                                        </property>
+                                                        <property name="whatsThis" stdset="0">
+                                                            <string>A gateway machine used for Internet sharing.</string>
+                                                        </property>
+                                                    </widget>
+                                                </hbox>
+                                            </widget>
+                                        </grid>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                        </vbox>
+                    </widget>
+                </grid>
+            </widget>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout2</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>kbtnDefault</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Defa&amp;ult</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+U</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>61</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>kbtnSave</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Sa&amp;ve</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+V</string>
+                    </property>
+                </widget>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>kbtnCancel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Ca&amp;ncel</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+N</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>ktabwidget.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+</includehints>
+</UI>
