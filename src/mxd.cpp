@@ -24,46 +24,46 @@
  ***************************************************************************/
 
 #include "mxd.h"
-#include <qtimer.h>
-#include <qtooltip.h>
-#include <qcursor.h>
-#include <qpainter.h>
-#include <qclipboard.h>
+#include <ntqtimer.h>
+#include <ntqtooltip.h>
+#include <ntqcursor.h>
+#include <ntqpainter.h>
+#include <ntqclipboard.h>
 #include <kiconloader.h>
-#include <kmessagebox.h>
-#include <kpopupmenu.h>
-#include <klocale.h>
+#include <tdemessagebox.h>
+#include <tdepopupmenu.h>
+#include <tdelocale.h>
 #include <kstdaction.h>
 #include <kpassivepopup.h>
-#include <kapplication.h>
-#include <kaboutapplication.h>
-#include <kcmdlineargs.h>
-#include <kconfig.h>
+#include <tdeapplication.h>
+#include <tdeaboutapplication.h>
+#include <tdecmdlineargs.h>
+#include <tdeconfig.h>
 #include "settingdialog.h"
 #include "statistics.h"
 
 #define ICONSIZE 22
-#define Icon(x) KGlobal::instance()->iconLoader()->loadIcon(x, KIcon::Toolbar)
+#define Icon(x) TDEGlobal::instance()->iconLoader()->loadIcon(x, TDEIcon::Toolbar)
 
 extern const char * programName;
 
-class MxDialerTip : public QToolTip{
+class MxDialerTip : public TQToolTip{
 public:
-	MxDialerTip(QWidget *parent);
+	MxDialerTip(TQWidget *parent);
 protected:
-	void maybeTip(const QPoint &);
+	void maybeTip(const TQPoint &);
 };
 
-MxDialerTip::MxDialerTip(QWidget *parent)
-	: QToolTip(parent) 
+MxDialerTip::MxDialerTip(TQWidget *parent)
+	: TQToolTip(parent) 
 {
 }
 
-void MxDialerTip::maybeTip(const QPoint &pos)
+void MxDialerTip::maybeTip(const TQPoint &pos)
 {
 	if(!parentWidget()->inherits("MxDialer"))
 		return;
-	QRect r( ((MxDialer *)parentWidget())->rect() );
+	TQRect r( ((MxDialer *)parentWidget())->rect() );
 	if(!r.isValid()) 
 		return;
 	tip(r, ((MxDialer *)parentWidget())->updateTip());
@@ -72,40 +72,40 @@ void MxDialerTip::maybeTip(const QPoint &pos)
 
 /// MxDialer class
 
-MxDialer::MxDialer(QWidget *parent, const char *name) : KSystemTray(parent, name)
+MxDialer::MxDialer(TQWidget *parent, const char *name) : KSystemTray(parent, name)
 {
-	QString script = "rppppoek.sh";
+	TQString script = "rppppoek.sh";
 	mInterface = "ppp0";
 
-	KActionCollection* actionCollection = new KActionCollection(this);
+	TDEActionCollection* actionCollection = new TDEActionCollection(this);
 
-	start = new KProcess;
+	start = new TDEProcess;
 	*start << "sudo" << "pppoe-start";
 
-	stat = new KProcess;
+	stat = new TDEProcess;
 	*stat << script << "status" << mInterface;
 
-	stop = new KProcess;
+	stop = new TDEProcess;
 	*stop << "sudo" << "pppoe-stop";
 
 	ipFound=false;
 	//setPixmap(Icon("kppp"));
 
-	KAction* about = KStdAction::aboutApp(this, SLOT (showAbout()), actionCollection);
-	conToProv = new KAction(i18n("Connect"), Icon("connect_established"), 0, 0, 0, actionCollection, 0);
-	disFromProv = new KAction(i18n("Disconnect"), Icon("connect_no"), 0, 0, 0, actionCollection, 0);
-	KAction* status = new KAction(i18n("Show IP-address"), Icon("info"), 0, 0, 0, actionCollection, 0);
+	TDEAction* about = KStdAction::aboutApp(this, SLOT (showAbout()), actionCollection);
+	conToProv = new TDEAction(i18n("Connect"), Icon("connect_established"), 0, 0, 0, actionCollection, 0);
+	disFromProv = new TDEAction(i18n("Disconnect"), Icon("connect_no"), 0, 0, 0, actionCollection, 0);
+	TDEAction* status = new TDEAction(i18n("Show IP-address"), Icon("application-vnd.tde.info"), 0, 0, 0, actionCollection, 0);
 
-	showConfigure = new KAction(i18n("Settings"), Icon("configure"), 0, 0, 0, actionCollection, 0);
+	showConfigure = new TDEAction(i18n("Settings"), Icon("configure"), 0, 0, 0, actionCollection, 0);
 
 	connect (conToProv, SIGNAL(activated()), this, SLOT(con()));
 	connect (disFromProv, SIGNAL(activated()), this, SLOT(discon()));
 	connect (showConfigure, SIGNAL(activated()), this, SLOT(showConfigureDialog()));
 	connect (status, SIGNAL(activated()), this, SLOT(getStatus()));
 
-	connect (stat, SIGNAL(receivedStdout(KProcess*, char*, int)), this, SLOT(receiveIP(KProcess*, char*, int)));
-	connect (start, SIGNAL(processExited(KProcess*)), this, SLOT(connected()));
-	connect (stop, SIGNAL(processExited(KProcess*)), this, SLOT(disconnected()));
+	connect (stat, SIGNAL(receivedStdout(TDEProcess*, char*, int)), this, SLOT(receiveIP(TDEProcess*, char*, int)));
+	connect (start, SIGNAL(processExited(TDEProcess*)), this, SLOT(connected()));
+	connect (stop, SIGNAL(processExited(TDEProcess*)), this, SLOT(disconnected()));
 
 	contextMenu()->clear();
 	contextMenu()->insertTitle(Icon("mxd"), i18n("Magic xDSL Dialer"), 0);
@@ -128,52 +128,52 @@ MxDialer::MxDialer(QWidget *parent, const char *name) : KSystemTray(parent, name
 	memset(mSpeedPRx, 0, sizeof(double)*HISTORY_SIZE);
 	memset(mSpeedPTx, 0, sizeof(double)*HISTORY_SIZE);
 
-	setTextFormat(Qt::PlainText);
+	setTextFormat(TQt::PlainText);
 	show();
 
-	mTimer = new QTimer(this, "timer");
+	mTimer = new TQTimer(this, "timer");
 	connect(mTimer, SIGNAL(timeout()), this, SLOT(updateStats(void)));
 
 	setup();
 	mStatistics = new Statistics(this);
 	new MxDialerTip(this);
 
-	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+	TDECmdLineArgs *args = TDECmdLineArgs::parsedArgs();
 	if(args->isSet("start")){
 		printf("start connecting...\n");
-		QTimer::singleShot(200, this, SLOT(con()));
+		TQTimer::singleShot(200, this, SLOT(con()));
 	}
 	if(args->isSet("stop")){
 		printf("stop connection...\n");
-		QTimer::singleShot(200, this, SLOT(discon()));
+		TQTimer::singleShot(200, this, SLOT(discon()));
 	}
 	args->clear();
 }
 
 MxDialer::~MxDialer()
 {
-	KConfig* cfg = kapp->config();
-	KConfigGroupSaver groupSaver(cfg, "General");
+	TDEConfig* cfg = kapp->config();
+	TDEConfigGroupSaver groupSaver(cfg, "General");
 	if(mbConnected && cfg->readBoolEntry("StopOnExit", false)){
-		stop->start(KProcess::Block);
+		stop->start(TDEProcess::Block);
 	};
 }
 /** Connect */
 void MxDialer::con(){
-	start->start(KProcess::NotifyOnExit);
+	start->start(TDEProcess::NotifyOnExit);
 	conToProv->setText(i18n("Connect") + " (" + i18n("Trying to connect") + ")");
 }
 /** Disconnect */
 void MxDialer::discon(){
-	stop->start(KProcess::NotifyOnExit);
+	stop->start(TDEProcess::NotifyOnExit);
 	disFromProv->setText(i18n("Disconnect") + " (" + i18n("Trying to disconnect") + ")");
 }
 /** Display the IP */
-void MxDialer::receiveIP(KProcess* proc, char* buf, int len){
+void MxDialer::receiveIP(TDEProcess* proc, char* buf, int len){
 
 	/** Temp variables */
-	KProcess filter;
-	QString msg;
+	TDEProcess filter;
+	TQString msg;
 	int temp;
 
 	ipFound=true;
@@ -190,7 +190,7 @@ void MxDialer::receiveIP(KProcess* proc, char* buf, int len){
 }
 /** Try to get the IP */
 void MxDialer::getStatus(){
-	stat->start(KProcess::Block, KProcess::Stdout);
+	stat->start(TDEProcess::Block, TDEProcess::Stdout);
 	if (!ipFound){
 		KMessageBox::error(this, i18n("Couldn't find an IP-address for %1.\nPlease make sure you're connected.").arg("ppp0"));
 	}else{
@@ -199,7 +199,7 @@ void MxDialer::getStatus(){
 }
 /** Executes the about-dialog. */
 void MxDialer::showAbout(){
-	KAboutApplication dlg(this);
+	TDEAboutApplication dlg(this);
 	dlg.exec();	
 }
 /** Called when start terminates */
@@ -236,17 +236,17 @@ void MxDialer::showConfigureDialog( )
 	ui.exec();
 }
 
-void MxDialer::paintEvent( QPaintEvent* ev )
+void MxDialer::paintEvent( TQPaintEvent* ev )
 {
-	QPainter paint(this);
+	TQPainter paint(this);
 	paint.drawPixmap(0, 0, *mCurrentIcon);
 }
 
-void MxDialer::mousePressEvent(QMouseEvent* ev)
+void MxDialer::mousePressEvent(TQMouseEvent* ev)
 {
-	if (ev->button() == Qt::RightButton )
-		contextMenu()->exec(QCursor::pos());
-	else if (ev->button() == Qt::LeftButton)
+	if (ev->button() == TQt::RightButton )
+		contextMenu()->exec(TQCursor::pos());
+	else if (ev->button() == TQt::LeftButton)
 		statistics();
 }
 
@@ -278,7 +278,7 @@ void MxDialer::updateStats()
 
 		if (interface == mInterface)
 		{
-			QPixmap* newIcon;
+			TQPixmap* newIcon;
 
 			// Calcula as velocidades
 			mSpeedTx[mPtr] = ((btx - mBTx)*(1000.0f/UPDATE_INTERVAL));
@@ -304,7 +304,7 @@ void MxDialer::updateStats()
 			if (newIcon != mCurrentIcon)
 			{
 				mCurrentIcon = newIcon;
-				QWidget::update();
+				TQWidget::update();
 			}
 
 			// Update stats
@@ -340,7 +340,7 @@ void MxDialer::updateStats()
 		memset(mSpeedTx, 0, sizeof(double)*HISTORY_SIZE);
 		memset(mSpeedPRx, 0, sizeof(double)*HISTORY_SIZE);
 		memset(mSpeedPTx, 0, sizeof(double)*HISTORY_SIZE);
-		QWidget::update();
+		TQWidget::update();
 		KPassivePopup::message(programName, i18n("%1 is inactive").arg(mInterface), kapp->miniIcon(), this);
 	}
 	updateTip();
@@ -357,26 +357,26 @@ void MxDialer::statistics()
 void MxDialer::setup()
 {
 	// Load Icons
-	KIconLoader* loader = kapp->iconLoader();
-	mIconError = loader->loadIcon("status_error.png", KIcon::Panel, ICONSIZE);
-	mIconNone = loader->loadIcon("status_none.png", KIcon::Panel, ICONSIZE);
-	mIconTx = loader->loadIcon("status_tx.png", KIcon::Panel, ICONSIZE);
-	mIconRx =loader->loadIcon("status_rx.png", KIcon::Panel, ICONSIZE);
-	mIconBoth = loader->loadIcon("status_both.png", KIcon::Panel, ICONSIZE);
+	TDEIconLoader* loader = kapp->iconLoader();
+	mIconError = loader->loadIcon("status_error.png", TDEIcon::Panel, ICONSIZE);
+	mIconNone = loader->loadIcon("status_none.png", TDEIcon::Panel, ICONSIZE);
+	mIconTx = loader->loadIcon("status_tx.png", TDEIcon::Panel, ICONSIZE);
+	mIconRx =loader->loadIcon("status_rx.png", TDEIcon::Panel, ICONSIZE);
+	mIconBoth = loader->loadIcon("status_both.png", TDEIcon::Panel, ICONSIZE);
 	mCurrentIcon = mbConnected ? &mIconNone : &mIconError;
 
 	mTimer->start(UPDATE_INTERVAL);
 	updateStats();
-	QWidget::update();
+	TQWidget::update();
 }
 
-const QString MxDialer::updateTip( )
+const TQString MxDialer::updateTip( )
 {
-	QString tip = mInterface + " ";
+	TQString tip = mInterface + " ";
 	tip += mbConnected?i18n("Connected"):i18n("Disconnected");
 	tip += "<br>";
-	QString rx = Statistics::byteFormat( byteSpeedRx(), 1, " B" )+"/s";
-	QString tx = Statistics::byteFormat( byteSpeedTx(), 1, " B" )+"/s";
+	TQString rx = Statistics::byteFormat( byteSpeedRx(), 1, " B" )+"/s";
+	TQString tx = Statistics::byteFormat( byteSpeedTx(), 1, " B" )+"/s";
 	tip += (i18n("Upload speed:") + rx + "<br>");
 	tip += (i18n("Download speed:") + tx);
 	return tip;

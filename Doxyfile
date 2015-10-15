@@ -3,7 +3,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = mxd.kdevelop
+PROJECT_NAME           = mxd.tdevelop
 PROJECT_NUMBER         = 0.1
 OUTPUT_DIRECTORY       = 
 CREATE_SUBDIRS         = NO

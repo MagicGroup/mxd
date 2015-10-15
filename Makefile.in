@@ -153,18 +153,18 @@ LIBZ = @LIBZ@
 LIB_JASPER = @LIB_JASPER@
 LIB_KAB = @LIB_KAB@
 LIB_KABC = @LIB_KABC@
-LIB_KDECORE = @LIB_KDECORE@
-LIB_KDEPIM = @LIB_KDEPIM@
-LIB_KDEPRINT = @LIB_KDEPRINT@
-LIB_KDEUI = @LIB_KDEUI@
+LIB_TDECORE = @LIB_TDECORE@
+LIB_TDEPIM = @LIB_TDEPIM@
+LIB_TDEPRINT = @LIB_TDEPRINT@
+LIB_TDEUI = @LIB_TDEUI@
 LIB_KFILE = @LIB_KFILE@
 LIB_KFM = @LIB_KFM@
-LIB_KHTML = @LIB_KHTML@
-LIB_KIO = @LIB_KIO@
-LIB_KPARTS = @LIB_KPARTS@
-LIB_KSPELL = @LIB_KSPELL@
-LIB_KSYCOCA = @LIB_KSYCOCA@
-LIB_KUTILS = @LIB_KUTILS@
+LIB_TDEHTML = @LIB_TDEHTML@
+LIB_TDEIO = @LIB_TDEIO@
+LIB_TDEPARTS = @LIB_TDEPARTS@
+LIB_TDESPELL = @LIB_TDESPELL@
+LIB_TDESYCOCA = @LIB_TDESYCOCA@
+LIB_TDEUTILS = @LIB_TDEUTILS@
 LIB_POLL = @LIB_POLL@
 LIB_QPE = @LIB_QPE@
 LIB_QT = @LIB_QT@
@@ -248,7 +248,7 @@ kde_styledir = @kde_styledir@
 kde_templatesdir = @kde_templatesdir@
 kde_wallpaperdir = @kde_wallpaperdir@
 kde_widgetdir = @kde_widgetdir@
-kdeinitdir = @kdeinitdir@
+tdeinitdir = @tdeinitdir@
 qt_includes = @qt_includes@
 qt_libraries = @qt_libraries@
 x_includes = @x_includes@
@@ -656,7 +656,7 @@ dist-hook:
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=stamp-h.in mxd.kdevelop subdirs configure.files Makefile.cvs Doxyfile 
+KDE_DIST=stamp-h.in mxd.tdevelop subdirs configure.files Makefile.cvs Doxyfile 
 
 #>+ 2
 docs-am:

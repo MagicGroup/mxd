@@ -1,5 +1,5 @@
 <?xml version = '1.0'?>
-<kdevelop>
+<tdevelop>
   <general>
     <author>yunfan</author>
     <email>yunfan_zg@163.com</email>
@@ -181,4 +181,4 @@
       <implementationsuffix>.cpp</implementationsuffix>
     </filetemplates>
   </cppsupportpart>
-</kdevelop>
+</tdevelop>

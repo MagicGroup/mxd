@@ -31,12 +31,12 @@
 #include <config.h>
 #endif
 
-#include <qpixmap.h>
+#include <ntqpixmap.h>
 #include <kapp.h>
 #include <ksystemtray.h>
 #include <kprocess.h>
 #include <kdialog.h>
-#include <kaction.h>
+#include <tdeaction.h>
 
 /**
  * @short A KSystemTray based Main class
@@ -47,9 +47,9 @@
 #define HISTORY_SIZE 5
 #define UPDATE_INTERVAL 300
 
-class QTimer;
-class QMouseEvent;
-class QPaintEvent;
+class TQTimer;
+class TQMouseEvent;
+class TQPaintEvent;
 class Statistics;
 
 class MxDialer : public KSystemTray
@@ -57,12 +57,12 @@ class MxDialer : public KSystemTray
 	Q_OBJECT
 public:
 	/** construtor */
-	MxDialer(QWidget* parent=0, const char *name=0);
+	MxDialer(TQWidget* parent=0, const char *name=0);
 	/** destructor */
 	~MxDialer();
 
 	///	The current monitored network interface
-	inline const QString& interface() const;
+	inline const TQString& interface() const;
 	///	The current Update Interval in miliseconds
 	inline int updateInterval() const;
 
@@ -83,24 +83,24 @@ public:
 	/// TX Speed in packets per second
 	inline double pktSpeedTx() const;
 
-	const QString updateTip();
+	const TQString updateTip();
 private:
-	KProcess* start;
-	KProcess* stat;
-	KProcess* stop;
+	TDEProcess* start;
+	TDEProcess* stat;
+	TDEProcess* stop;
 	bool ipFound;
-	QString mIPAddress;
+	TQString mIPAddress;
 	KDialog* aboutDialog;
-	KAction* conToProv;
-	KAction* disFromProv;
-	KAction* showConfigure;
+	TDEAction* conToProv;
+	TDEAction* disFromProv;
+	TDEAction* showConfigure;
 
 	Statistics* mStatistics;
-	QString mInterface;
+	TQString mInterface;
 
-	QPixmap* mCurrentIcon;
-	QPixmap mIconError, mIconNone, mIconTx, mIconRx, mIconBoth;
-	QTimer* mTimer;
+	TQPixmap* mCurrentIcon;
+	TQPixmap mIconError, mIconNone, mIconTx, mIconRx, mIconBoth;
+	TQTimer* mTimer;
 	unsigned int mBRx, mBTx, mPRx, mPTx;
 	unsigned int mTotalBytesRx, mTotalBytesTx, mTotalPktRx, mTotalPktTx;
 	double mSpeedRx[HISTORY_SIZE], mSpeedTx[HISTORY_SIZE];
@@ -113,8 +113,8 @@ private:
 	void setup();
 	inline double calcSpeed(const double* field) const;
 protected:
-	void mousePressEvent( QMouseEvent* ev );
-	void paintEvent( QPaintEvent* ev );
+	void mousePressEvent( TQMouseEvent* ev );
+	void paintEvent( TQPaintEvent* ev );
 
 private slots: // Private slots
 	/** Disconnect */
@@ -124,7 +124,7 @@ private slots: // Private slots
 	/** Show configure dialog */
 	void showConfigureDialog();
 	/** Display the IP */
-	void receiveIP(KProcess* proc, char* buf, int len);
+	void receiveIP(TDEProcess* proc, char* buf, int len);
 	/** Try to get the IP */
 	void getStatus();
 	/** Show the about-dialog */
@@ -149,7 +149,7 @@ double MxDialer::calcSpeed(const double* field) const
 	return total/HISTORY_SIZE;
 }
 
-const QString& MxDialer::interface() const
+const TQString& MxDialer::interface() const
 {
 	return mInterface;
 }

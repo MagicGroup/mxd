@@ -24,7 +24,7 @@ bin_PROGRAMS = mxd
 mxd_SOURCES = main.cpp mxd.cpp settingdialog.cpp statisticsbase.ui \
 	statistics.cpp mxdconfigureuibase.ui
 mxd_LDFLAGS = $(KDE_RPATH) $(all_libraries)
-mxd_LDADD = $(LIB_KDEUI)
+mxd_LDADD = -ltqt-mt $(LIB_TDEUI) $(LIB_TDECORE)
 
 # this is where the desktop file will go 
 shelldesktopdir   = $(kde_appsdir)/Utilities

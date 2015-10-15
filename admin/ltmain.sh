@@ -73,9 +73,9 @@
 
 PROGRAM=ltmain.sh
 PACKAGE=libtool
-VERSION="2.4"
+VERSION="2.2.6b Debian-2.2.6b-2ubuntu1"
 TIMESTAMP=""
-package_revision=1.3293
+package_revision=1.3017
 
 # Be Bourne compatible
 if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then

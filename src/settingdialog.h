@@ -22,17 +22,17 @@
 #define SETTINGDIALOG_H
 
 #include "mxdconfigureuibase.h"
-#include <qstringlist.h>
+#include <ntqstringlist.h>
 
-class KProcess;
-class QCloseEvent;
+class TDEProcess;
+class TQCloseEvent;
 class PPPoEConfFile;
 
 class SettingDialog : public MxDConfigureUIBase
 {
 	Q_OBJECT
 public:
-	SettingDialog(QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
+	SettingDialog(TQWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
 	~SettingDialog();
 
 private:
@@ -41,7 +41,7 @@ private:
 	bool m_AutoStopOnExitSet;
 
 	void getEthernetCards();
-	void closeEvent( QCloseEvent *e);
+	void closeEvent( TQCloseEvent *e);
 
 	void updateDialog(PPPoEConfFile *conf = NULL);
 	PPPoEConfFile *getConfValues();

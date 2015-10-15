@@ -15,11 +15,11 @@
  *                                                                         *
  ***************************************************************************/
 
-#include <kcmdlineargs.h>
-#include <kaboutdata.h>
-#include <klocale.h>
+#include <tdecmdlineargs.h>
+#include <tdeaboutdata.h>
+#include <tdelocale.h>
 #include <kuniqueapplication.h>
-#include <kaboutapplication.h>
+#include <tdeaboutapplication.h>
 
 #include "mxd.h"
 #include "settingdialog.h"
@@ -30,7 +30,7 @@ static const char *description =
 		"\nextending from \"RP-PPPoEK\" project by Christian Nitschkowski.");
 
 
-static KCmdLineOptions options[] =
+static TDECmdLineOptions options[] =
 {
 	{ "setup", I18N_NOOP("Pop up setup window only."), 0},
 	{ "start", I18N_NOOP("Connect xDSL directly."), 0},
@@ -39,20 +39,20 @@ static KCmdLineOptions options[] =
 
 int main(int argc, char *argv[])
 {
-	KAboutData aboutData( "mxd", programName,
-		VERSION, description, KAboutData::License_GPL,
+	TDEAboutData aboutData( "mxd", programName,
+		VERSION, description, TDEAboutData::License_GPL,
 		"(c) 2005, yunfan", 0, 0, "yunfan_zg@163.com");
 	aboutData.addAuthor("yunfan", 0, "yunfan_zg@163.com");
 	aboutData.addCredit("Christian Nitschkowski", I18N_NOOP("Author of \"Roaring Penguin PPPoE Kontrol\"."), "segfault_ii@web.de");
 	aboutData.addCredit( "Hugo Parente Lima", I18N_NOOP("Author of \"KNetStats\"."), "hugo_pl@users.sourceforge.net" );
-	KCmdLineArgs::init( argc, argv, &aboutData );
-	KCmdLineArgs::addCmdLineOptions( options );
+	TDECmdLineArgs::init( argc, argv, &aboutData );
+	TDECmdLineArgs::addCmdLineOptions( options );
 
 
 	KUniqueApplication a;
 
-	QObject::connect(&a, SIGNAL(lastWindowClosed()), &a, SLOT(quit()));
-	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+	TQObject::connect(&a, SIGNAL(lastWindowClosed()), &a, SLOT(quit()));
+	TDECmdLineArgs *args = TDECmdLineArgs::parsedArgs();
 	if(args->isSet("setup")){
 		SettingDialog *dialog = new SettingDialog();
 		a.setMainWidget(dialog);

@@ -153,18 +153,18 @@ LIBZ = @LIBZ@
 LIB_JASPER = @LIB_JASPER@
 LIB_KAB = @LIB_KAB@
 LIB_KABC = @LIB_KABC@
-LIB_KDECORE = @LIB_KDECORE@
-LIB_KDEPIM = @LIB_KDEPIM@
-LIB_KDEPRINT = @LIB_KDEPRINT@
-LIB_KDEUI = @LIB_KDEUI@
+LIB_TDECORE = @LIB_TDECORE@
+LIB_TDEPIM = @LIB_TDEPIM@
+LIB_TDEPRINT = @LIB_TDEPRINT@
+LIB_TDEUI = @LIB_TDEUI@
 LIB_KFILE = @LIB_KFILE@
 LIB_KFM = @LIB_KFM@
-LIB_KHTML = @LIB_KHTML@
-LIB_KIO = @LIB_KIO@
-LIB_KPARTS = @LIB_KPARTS@
-LIB_KSPELL = @LIB_KSPELL@
-LIB_KSYCOCA = @LIB_KSYCOCA@
-LIB_KUTILS = @LIB_KUTILS@
+LIB_TDEHTML = @LIB_TDEHTML@
+LIB_TDEIO = @LIB_TDEIO@
+LIB_TDEPARTS = @LIB_TDEPARTS@
+LIB_TDESPELL = @LIB_TDESPELL@
+LIB_TDESYCOCA = @LIB_TDESYCOCA@
+LIB_TDEUTILS = @LIB_TDEUTILS@
 LIB_POLL = @LIB_POLL@
 LIB_QPE = @LIB_QPE@
 LIB_QT = @LIB_QT@
@@ -248,7 +248,7 @@ kde_styledir = @kde_styledir@
 kde_templatesdir = @kde_templatesdir@
 kde_wallpaperdir = @kde_wallpaperdir@
 kde_widgetdir = @kde_widgetdir@
-kdeinitdir = @kdeinitdir@
+tdeinitdir = @tdeinitdir@
 qt_includes = @qt_includes@
 qt_libraries = @qt_libraries@
 x_includes = @x_includes@
@@ -283,7 +283,7 @@ mxd_SOURCES=main.cpp mxd.cpp settingdialog.cpp  \
 	statistics.cpp  statisticsbase.cpp mxdconfigureuibase.cpp
 
 mxd_LDFLAGS = $(KDE_RPATH) $(all_libraries)
-mxd_LDADD = $(LIB_KDEUI)
+mxd_LDADD = $(LIB_TDEUI)
 
 # this is where the desktop file will go 
 shelldesktopdir = $(kde_appsdir)/Utilities
@@ -906,7 +906,7 @@ $(srcdir)/mxd.cpp: statisticsbase.h mxdconfigureuibase.h
 mxdconfigureuibase.cpp: $(srcdir)/mxdconfigureuibase.ui mxdconfigureuibase.h mxdconfigureuibase.moc
 	rm -f mxdconfigureuibase.cpp
 	echo '#include <kdialog.h>' > mxdconfigureuibase.cpp
-	echo '#include <klocale.h>' >> mxdconfigureuibase.cpp
+	echo '#include <tdelocale.h>' >> mxdconfigureuibase.cpp
 	$(UIC) -tr ${UIC_TR} -i mxdconfigureuibase.h $(srcdir)/mxdconfigureuibase.ui > mxdconfigureuibase.cpp.temp ; ret=$$?; \
 	$(PERL) -pe "s,${UIC_TR}( \"\" ),QString::null,g" mxdconfigureuibase.cpp.temp | $(PERL) -pe "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | $(PERL) -pe "s,image([0-9][0-9]*)_data,img\$$1_mxdconfigureuibase,g" >> mxdconfigureuibase.cpp ;\
 	rm -f mxdconfigureuibase.cpp.temp ;\
@@ -921,7 +921,7 @@ mxdconfigureuibase.moc: mxdconfigureuibase.h
 statisticsbase.cpp: $(srcdir)/statisticsbase.ui statisticsbase.h statisticsbase.moc
 	rm -f statisticsbase.cpp
 	echo '#include <kdialog.h>' > statisticsbase.cpp
-	echo '#include <klocale.h>' >> statisticsbase.cpp
+	echo '#include <tdelocale.h>' >> statisticsbase.cpp
 	$(UIC) -tr ${UIC_TR} -i statisticsbase.h $(srcdir)/statisticsbase.ui > statisticsbase.cpp.temp ; ret=$$?; \
 	$(PERL) -pe "s,${UIC_TR}( \"\" ),QString::null,g" statisticsbase.cpp.temp | $(PERL) -pe "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | $(PERL) -pe "s,image([0-9][0-9]*)_data,img\$$1_statisticsbase,g" >> statisticsbase.cpp ;\
 	rm -f statisticsbase.cpp.temp ;\

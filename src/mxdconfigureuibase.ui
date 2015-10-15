@@ -1,6 +1,6 @@
 <!DOCTYPE UI><UI version="3.3" stdsetdef="1">
 <class>MxDConfigureUIBase</class>
-<widget class="QDialog">
+<widget class="TQDialog">
     <property name="name">
         <cstring>MxDConfigureUIBase</cstring>
     </property>
@@ -29,7 +29,7 @@
             <property name="currentPage">
                 <number>0</number>
             </property>
-            <widget class="QWidget">
+            <widget class="TQWidget">
                 <property name="name">
                     <cstring>TabPage</cstring>
                 </property>
@@ -40,7 +40,7 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
-                    <widget class="QLayoutWidget" row="0" column="0">
+                    <widget class="TQLayoutWidget" row="0" column="0">
                         <property name="name">
                             <cstring>layout23</cstring>
                         </property>
@@ -48,7 +48,7 @@
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
-                            <widget class="QGroupBox">
+                            <widget class="TQGroupBox">
                                 <property name="name">
                                     <cstring>gbLogin</cstring>
                                 </property>
@@ -59,7 +59,7 @@
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
-                                    <widget class="QLayoutWidget" row="0" column="0">
+                                    <widget class="TQLayoutWidget" row="0" column="0">
                                         <property name="name">
                                             <cstring>layout11</cstring>
                                         </property>
@@ -67,7 +67,7 @@
                                             <property name="name">
                                                 <cstring>unnamed</cstring>
                                             </property>
-                                            <widget class="QLayoutWidget">
+                                            <widget class="TQLayoutWidget">
                                                 <property name="name">
                                                     <cstring>layout9</cstring>
                                                 </property>
@@ -75,7 +75,7 @@
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QLabel">
+                                                    <widget class="TQLabel">
                                                         <property name="name">
                                                             <cstring>lblUsername</cstring>
                                                         </property>
@@ -83,7 +83,7 @@
                                                             <string>User Name:</string>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QLabel">
+                                                    <widget class="TQLabel">
                                                         <property name="name">
                                                             <cstring>lblpassword</cstring>
                                                         </property>
@@ -93,7 +93,7 @@
                                                     </widget>
                                                 </vbox>
                                             </widget>
-                                            <widget class="QLayoutWidget">
+                                            <widget class="TQLayoutWidget">
                                                 <property name="name">
                                                     <cstring>layout10</cstring>
                                                 </property>
@@ -101,7 +101,7 @@
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QLineEdit">
+                                                    <widget class="TQLineEdit">
                                                         <property name="name">
                                                             <cstring>leUsername</cstring>
                                                         </property>
@@ -109,7 +109,7 @@
                                                             <string>PPPoE user name.  You may have to supply \"@provider.com\".</string>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QLineEdit">
+                                                    <widget class="TQLineEdit">
                                                         <property name="name">
                                                             <cstring>lePassword</cstring>
                                                         </property>
@@ -123,7 +123,7 @@
                                     </widget>
                                 </grid>
                             </widget>
-                            <widget class="QGroupBox">
+                            <widget class="TQGroupBox">
                                 <property name="name">
                                     <cstring>gbNetwork</cstring>
                                 </property>
@@ -134,7 +134,7 @@
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
-                                    <widget class="QLayoutWidget" row="0" column="0">
+                                    <widget class="TQLayoutWidget" row="0" column="0">
                                         <property name="name">
                                             <cstring>layout21</cstring>
                                         </property>
@@ -142,7 +142,7 @@
                                             <property name="name">
                                                 <cstring>unnamed</cstring>
                                             </property>
-                                            <widget class="QLayoutWidget">
+                                            <widget class="TQLayoutWidget">
                                                 <property name="name">
                                                     <cstring>layout6</cstring>
                                                 </property>
@@ -150,7 +150,7 @@
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QLabel">
+                                                    <widget class="TQLabel">
                                                         <property name="name">
                                                             <cstring>lblEthCard</cstring>
                                                         </property>
@@ -158,7 +158,7 @@
                                                             <string>Ethernet Interface:</string>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QComboBox">
+                                                    <widget class="TQComboBox">
                                                         <property name="name">
                                                             <cstring>cbbEth</cstring>
                                                         </property>
@@ -168,7 +168,7 @@
                                                     </widget>
                                                 </hbox>
                                             </widget>
-                                            <widget class="QLayoutWidget">
+                                            <widget class="TQLayoutWidget">
                                                 <property name="name">
                                                     <cstring>layout15</cstring>
                                                 </property>
@@ -176,7 +176,7 @@
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QLabel">
+                                                    <widget class="TQLabel">
                                                         <property name="name">
                                                             <cstring>lblDNS</cstring>
                                                         </property>
@@ -184,7 +184,7 @@
                                                             <string>DNS Type:</string>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QComboBox">
+                                                    <widget class="TQComboBox">
                                                         <item>
                                                             <property name="text">
                                                                 <string>obtain from server</string>
@@ -220,7 +220,7 @@
                                                     <enum>Horizontal</enum>
                                                 </property>
                                             </widget>
-                                            <widget class="QFrame">
+                                            <widget class="TQFrame">
                                                 <property name="name">
                                                     <cstring>fraDNS</cstring>
                                                 </property>
@@ -237,7 +237,7 @@
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QLayoutWidget" row="0" column="0">
+                                                    <widget class="TQLayoutWidget" row="0" column="0">
                                                         <property name="name">
                                                             <cstring>layout18</cstring>
                                                         </property>
@@ -245,7 +245,7 @@
                                                             <property name="name">
                                                                 <cstring>unnamed</cstring>
                                                             </property>
-                                                            <widget class="QLayoutWidget">
+                                                            <widget class="TQLayoutWidget">
                                                                 <property name="name">
                                                                     <cstring>layout16</cstring>
                                                                 </property>
@@ -253,7 +253,7 @@
                                                                     <property name="name">
                                                                         <cstring>unnamed</cstring>
                                                                     </property>
-                                                                    <widget class="QLabel">
+                                                                    <widget class="TQLabel">
                                                                         <property name="name">
                                                                             <cstring>lblDNS1</cstring>
                                                                         </property>
@@ -261,7 +261,7 @@
                                                                             <string>Primary DNS:</string>
                                                                         </property>
                                                                     </widget>
-                                                                    <widget class="QLabel">
+                                                                    <widget class="TQLabel">
                                                                         <property name="name">
                                                                             <cstring>lblDNS2</cstring>
                                                                         </property>
@@ -271,7 +271,7 @@
                                                                     </widget>
                                                                 </vbox>
                                                             </widget>
-                                                            <widget class="QLayoutWidget">
+                                                            <widget class="TQLayoutWidget">
                                                                 <property name="name">
                                                                     <cstring>layout17</cstring>
                                                                 </property>
@@ -279,7 +279,7 @@
                                                                     <property name="name">
                                                                         <cstring>unnamed</cstring>
                                                                     </property>
-                                                                    <widget class="QLineEdit">
+                                                                    <widget class="TQLineEdit">
                                                                         <property name="name">
                                                                             <cstring>leDNS1</cstring>
                                                                         </property>
@@ -287,7 +287,7 @@
                                                                             <bool>false</bool>
                                                                         </property>
                                                                     </widget>
-                                                                    <widget class="QLineEdit">
+                                                                    <widget class="TQLineEdit">
                                                                         <property name="name">
                                                                             <cstring>leDNS2</cstring>
                                                                         </property>
@@ -305,7 +305,7 @@
                                     </widget>
                                 </grid>
                             </widget>
-                            <widget class="QGroupBox">
+                            <widget class="TQGroupBox">
                                 <property name="name">
                                     <cstring>gbOthers</cstring>
                                 </property>
@@ -316,7 +316,7 @@
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
-                                    <widget class="QLayoutWidget" row="0" column="0">
+                                    <widget class="TQLayoutWidget" row="0" column="0">
                                         <property name="name">
                                             <cstring>layout22</cstring>
                                         </property>
@@ -324,7 +324,7 @@
                                             <property name="name">
                                                 <cstring>unnamed</cstring>
                                             </property>
-                                            <widget class="QCheckBox">
+                                            <widget class="TQCheckBox">
                                                 <property name="name">
                                                     <cstring>chbAutoStart</cstring>
                                                 </property>
@@ -335,7 +335,7 @@
                                                     <string>Alt+K</string>
                                                 </property>
                                             </widget>
-                                            <widget class="QCheckBox">
+                                            <widget class="TQCheckBox">
                                                 <property name="name">
                                                     <cstring>chkbStopOnExit</cstring>
                                                 </property>
@@ -354,7 +354,7 @@
                     </widget>
                 </grid>
             </widget>
-            <widget class="QWidget">
+            <widget class="TQWidget">
                 <property name="name">
                     <cstring>TabPage</cstring>
                 </property>
@@ -365,7 +365,7 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
-                    <widget class="QLayoutWidget" row="0" column="0">
+                    <widget class="TQLayoutWidget" row="0" column="0">
                         <property name="name">
                             <cstring>layout39</cstring>
                         </property>
@@ -373,7 +373,7 @@
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
-                            <widget class="QLabel">
+                            <widget class="TQLabel">
                                 <property name="name">
                                     <cstring>lblNotice</cstring>
                                 </property>
@@ -400,7 +400,7 @@
                                     <set>WordBreak|AlignVCenter</set>
                                 </property>
                             </widget>
-                            <widget class="QLayoutWidget">
+                            <widget class="TQLayoutWidget">
                                 <property name="name">
                                     <cstring>layout38</cstring>
                                 </property>
@@ -414,7 +414,7 @@
                                     <property name="spacing">
                                         <number>10</number>
                                     </property>
-                                    <widget class="QRadioButton">
+                                    <widget class="TQRadioButton">
                                         <property name="name">
                                             <cstring>rbtnSyn</cstring>
                                         </property>
@@ -433,7 +433,7 @@ It is safer to use "no", but you may want to experiment with "yes".  "yes" is ge
 safe on Linux machines with the n_hdlc line discipline; unsafe on others.</string>
                                         </property>
                                     </widget>
-                                    <widget class="QLayoutWidget">
+                                    <widget class="TQLayoutWidget">
                                         <property name="name">
                                             <cstring>layout30</cstring>
                                         </property>
@@ -441,7 +441,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                             <property name="name">
                                                 <cstring>unnamed</cstring>
                                             </property>
-                                            <widget class="QLayoutWidget">
+                                            <widget class="TQLayoutWidget">
                                                 <property name="name">
                                                     <cstring>layout28</cstring>
                                                 </property>
@@ -449,7 +449,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QLabel">
+                                                    <widget class="TQLabel">
                                                         <property name="name">
                                                             <cstring>lblServiceName</cstring>
                                                         </property>
@@ -457,7 +457,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                             <string>Service Name:</string>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QLabel">
+                                                    <widget class="TQLabel">
                                                         <property name="name">
                                                             <cstring>textLabel9</cstring>
                                                         </property>
@@ -467,7 +467,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                     </widget>
                                                 </vbox>
                                             </widget>
-                                            <widget class="QLayoutWidget">
+                                            <widget class="TQLayoutWidget">
                                                 <property name="name">
                                                     <cstring>layout29</cstring>
                                                 </property>
@@ -475,7 +475,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QLineEdit">
+                                                    <widget class="TQLineEdit">
                                                         <property name="name">
                                                             <cstring>leServiceName</cstring>
                                                         </property>
@@ -483,7 +483,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                             <string>Enter service name if required. Most ISPs do not require this. Try leaving it blank.</string>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QLineEdit">
+                                                    <widget class="TQLineEdit">
                                                         <property name="name">
                                                             <cstring>leACName</cstring>
                                                         </property>
@@ -509,7 +509,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                             <enum>Horizontal</enum>
                                         </property>
                                     </widget>
-                                    <widget class="QLayoutWidget">
+                                    <widget class="TQLayoutWidget">
                                         <property name="name">
                                             <cstring>layout33</cstring>
                                         </property>
@@ -517,7 +517,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                             <property name="name">
                                                 <cstring>unnamed</cstring>
                                             </property>
-                                            <widget class="QLayoutWidget">
+                                            <widget class="TQLayoutWidget">
                                                 <property name="name">
                                                     <cstring>layout31</cstring>
                                                 </property>
@@ -525,7 +525,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QLabel">
+                                                    <widget class="TQLabel">
                                                         <property name="name">
                                                             <cstring>lblPPPoEExtra</cstring>
                                                         </property>
@@ -533,7 +533,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                             <string>PPPoE Args:</string>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QLabel">
+                                                    <widget class="TQLabel">
                                                         <property name="name">
                                                             <cstring>lblPPPDExtra</cstring>
                                                         </property>
@@ -543,7 +543,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                     </widget>
                                                 </vbox>
                                             </widget>
-                                            <widget class="QLayoutWidget">
+                                            <widget class="TQLayoutWidget">
                                                 <property name="name">
                                                     <cstring>layout32</cstring>
                                                 </property>
@@ -551,7 +551,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QLineEdit">
+                                                    <widget class="TQLineEdit">
                                                         <property name="name">
                                                             <cstring>lePPPoEExtra</cstring>
                                                         </property>
@@ -559,7 +559,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                             <string>Any extra arguments to pass to pppoe.  Normally, use a blank string.</string>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QLineEdit">
+                                                    <widget class="TQLineEdit">
                                                         <property name="name">
                                                             <cstring>lePPPDExtra</cstring>
                                                         </property>
@@ -571,7 +571,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                             </widget>
                                         </hbox>
                                     </widget>
-                                    <widget class="QButtonGroup">
+                                    <widget class="TQButtonGroup">
                                         <property name="name">
                                             <cstring>bgrpFireWall</cstring>
                                         </property>
@@ -582,7 +582,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                             <property name="name">
                                                 <cstring>unnamed</cstring>
                                             </property>
-                                            <widget class="QLayoutWidget" row="0" column="0">
+                                            <widget class="TQLayoutWidget" row="0" column="0">
                                                 <property name="name">
                                                     <cstring>layout25</cstring>
                                                 </property>
@@ -590,7 +590,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QRadioButton">
+                                                    <widget class="TQRadioButton">
                                                         <property name="name">
                                                             <cstring>rbtnFireWallNone</cstring>
                                                         </property>
@@ -607,7 +607,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                             <string>Select None if you already have your own firewall rules or want to run servers.</string>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QRadioButton">
+                                                    <widget class="TQRadioButton">
                                                         <property name="name">
                                                             <cstring>rbtnFireWallStandAlone</cstring>
                                                         </property>
@@ -621,7 +621,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                                                             <string>A stand-alone machine.</string>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QRadioButton">
+                                                    <widget class="TQRadioButton">
                                                         <property name="name">
                                                             <cstring>rbtnFireWallMasquerade</cstring>
                                                         </property>
@@ -646,7 +646,7 @@ safe on Linux machines with the n_hdlc line discipline; unsafe on others.</strin
                 </grid>
             </widget>
         </widget>
-        <widget class="QLayoutWidget">
+        <widget class="TQLayoutWidget">
             <property name="name">
                 <cstring>layout2</cstring>
             </property>

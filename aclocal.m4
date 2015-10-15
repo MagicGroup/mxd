@@ -35,8 +35,8 @@ dnl IMPORTANT NOTE:
 dnl Please do not modify this file unless you expect your modifications to be
 dnl carried into every other module in the repository. 
 dnl
-dnl Single-module modifications are best placed in configure.in for kdelibs
-dnl and kdebase or configure.in.in if present.
+dnl Single-module modifications are best placed in configure.in for tdelibs
+dnl and tdebase or configure.in.in if present.
 
 # KDE_PATH_X_DIRECT
 dnl Internal subroutine of AC_PATH_X.
@@ -115,41 +115,41 @@ ac_x_libraries=],
 [LIBS="$ac_save_LIBS"
 # First see if replacing the include by lib works.
 # Check X11 before X11Rn because it is often a symlink to the current release.
-for ac_dir in `echo "$ac_x_includes" | sed s/include/lib${kdelibsuff}/` \
-    /usr/X11/lib${kdelibsuff}           \
-    /usr/X11R6/lib${kdelibsuff}         \
-    /usr/X11R5/lib${kdelibsuff}         \
-    /usr/X11R4/lib${kdelibsuff}         \
+for ac_dir in `echo "$ac_x_includes" | sed s/include/lib${tdelibsuff}/` \
+    /usr/X11/lib${tdelibsuff}           \
+    /usr/X11R6/lib${tdelibsuff}         \
+    /usr/X11R5/lib${tdelibsuff}         \
+    /usr/X11R4/lib${tdelibsuff}         \
                                         \
-    /usr/lib${kdelibsuff}/X11           \
-    /usr/lib${kdelibsuff}/X11R6         \
-    /usr/lib${kdelibsuff}/X11R5         \
-    /usr/lib${kdelibsuff}/X11R4         \
+    /usr/lib${tdelibsuff}/X11           \
+    /usr/lib${tdelibsuff}/X11R6         \
+    /usr/lib${tdelibsuff}/X11R5         \
+    /usr/lib${tdelibsuff}/X11R4         \
                                         \
-    /usr/local/X11/lib${kdelibsuff}     \
-    /usr/local/X11R6/lib${kdelibsuff}   \
-    /usr/local/X11R5/lib${kdelibsuff}   \
-    /usr/local/X11R4/lib${kdelibsuff}   \
+    /usr/local/X11/lib${tdelibsuff}     \
+    /usr/local/X11R6/lib${tdelibsuff}   \
+    /usr/local/X11R5/lib${tdelibsuff}   \
+    /usr/local/X11R4/lib${tdelibsuff}   \
                                         \
-    /usr/local/lib${kdelibsuff}/X11     \
-    /usr/local/lib${kdelibsuff}/X11R6   \
-    /usr/local/lib${kdelibsuff}/X11R5   \
-    /usr/local/lib${kdelibsuff}/X11R4   \
+    /usr/local/lib${tdelibsuff}/X11     \
+    /usr/local/lib${tdelibsuff}/X11R6   \
+    /usr/local/lib${tdelibsuff}/X11R5   \
+    /usr/local/lib${tdelibsuff}/X11R4   \
                                         \
-    /usr/X386/lib${kdelibsuff}          \
-    /usr/x386/lib${kdelibsuff}          \
-    /usr/XFree86/lib${kdelibsuff}/X11   \
+    /usr/X386/lib${tdelibsuff}          \
+    /usr/x386/lib${tdelibsuff}          \
+    /usr/XFree86/lib${tdelibsuff}/X11   \
                                         \
-    /usr/lib${kdelibsuff}               \
-    /usr/local/lib${kdelibsuff}         \
-    /usr/unsupported/lib${kdelibsuff}   \
-    /usr/athena/lib${kdelibsuff}        \
-    /usr/local/x11r5/lib${kdelibsuff}   \
-    /usr/lpp/Xamples/lib${kdelibsuff}   \
-    /lib/usr/lib${kdelibsuff}/X11       \
+    /usr/lib${tdelibsuff}               \
+    /usr/local/lib${tdelibsuff}         \
+    /usr/unsupported/lib${tdelibsuff}   \
+    /usr/athena/lib${tdelibsuff}        \
+    /usr/local/x11r5/lib${tdelibsuff}   \
+    /usr/lpp/Xamples/lib${tdelibsuff}   \
+    /lib/usr/lib${tdelibsuff}/X11       \
                                         \
-    /usr/openwin/lib${kdelibsuff}       \
-    /usr/openwin/share/lib${kdelibsuff} \
+    /usr/openwin/lib${tdelibsuff}       \
+    /usr/openwin/share/lib${tdelibsuff} \
     ; \
 do
 dnl Don't even attempt the hair of trying to link an X program!
@@ -372,24 +372,24 @@ AC_DEFUN([KDE_1_CHECK_PATHS],
   fi
 
 AC_MSG_CHECKING([for KDE libraries installed])
-ac_link='$LIBTOOL_SHELL --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore $LIBQT $KDE_TEST_RPATH 1>&5'
+ac_link='$LIBTOOL_SHELL --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -ltdecore $LIBQT $KDE_TEST_RPATH 1>&5'
 
 if AC_TRY_EVAL(ac_link) && test -s conftest; then
   AC_MSG_RESULT(yes)
 else
   AC_MSG_ERROR([your system fails at linking a small KDE application!
 Check, if your compiler is installed correctly and if you have used the
-same compiler to compile Qt and kdelibs as you did use now.
+same compiler to compile Qt and tdelibs as you did use now.
 For more details about this problem, look at the end of config.log.])
 fi
 
-if eval `KDEDIR= ./conftest 2>&5`; then
+if eval `TDEDIR= ./conftest 2>&5`; then
   kde_result=done
 else
   kde_result=problems
 fi
 
-KDEDIR= ./conftest 2> /dev/null >&5 # make an echo for config.log
+TDEDIR= ./conftest 2> /dev/null >&5 # make an echo for config.log
 kde_have_all_paths=yes
 
 KDE_SET_PATHS($kde_result)
@@ -555,11 +555,11 @@ AC_DEFUN([KDE_SUBST_PROGRAMS],
     AM_CONDITIONAL(include_ARTS, test "$build_arts" != "no")
 
         kde_default_bindirs="/usr/bin /usr/local/bin /opt/local/bin /usr/X11R6/bin /opt/kde/bin /opt/kde3/bin /usr/kde/bin /usr/local/kde/bin"
-        test -n "$KDEDIR" && kde_default_bindirs="$KDEDIR/bin $kde_default_bindirs"
-        if test -n "$KDEDIRS"; then
+        test -n "$TDEDIR" && kde_default_bindirs="$TDEDIR/bin $kde_default_bindirs"
+        if test -n "$TDEDIRS"; then
            kde_save_IFS=$IFS
            IFS=:
-           for dir in $KDEDIRS; do
+           for dir in $TDEDIRS; do
                 kde_default_bindirs="$dir/bin $kde_default_bindirs "
            done
            IFS=$kde_save_IFS
@@ -571,7 +571,7 @@ AC_DEFUN([KDE_SUBST_PROGRAMS],
           KDE_FIND_PATH(mcopidl, MCOPIDL, [$kde_default_bindirs], [KDE_MISSING_ARTS_ERROR(mcopidl)])
           KDE_FIND_PATH(artsc-config, ARTSCCONFIG, [$kde_default_bindirs], [KDE_MISSING_ARTS_ERROR(artsc-config)])
         fi
-        KDE_FIND_PATH(kde-config, KDECONFIG, [$kde_default_bindirs])
+        KDE_FIND_PATH(tde-config, KDECONFIG, [$kde_default_bindirs])
         KDE_FIND_PATH(meinproc, MEINPROC, [$kde_default_bindirs])
 
         kde32ornewer=1
@@ -584,14 +584,14 @@ AC_DEFUN([KDE_SUBST_PROGRAMS],
         fi
 
         if test -n "$kde32ornewer"; then
-            KDE_FIND_PATH(kconfig_compiler, KCONFIG_COMPILER, [$kde_default_bindirs], [KDE_MISSING_PROG_ERROR(kconfig_compiler)])
+            KDE_FIND_PATH(tdeconfig_compiler, KCONFIG_COMPILER, [$kde_default_bindirs], [KDE_MISSING_PROG_ERROR(tdeconfig_compiler)])
             KDE_FIND_PATH(dcopidlng, DCOPIDLNG, [$kde_default_bindirs], [KDE_MISSING_PROG_ERROR(dcopidlng)])
         fi
         KDE_FIND_PATH(xmllint, XMLLINT, [${prefix}/bin ${exec_prefix}/bin /usr/local/bin /opt/local/bin], [XMLLINT=""])
 
         if test -n "$MEINPROC" && test ! "$MEINPROC" = "compiled"; then  
  	    kde_sharedirs="/usr/share/kde /usr/local/share /usr/share /opt/kde3/share /opt/kde/share $prefix/share"
-            test -n "$KDEDIR" && kde_sharedirs="$KDEDIR/share $kde_sharedirs"
+            test -n "$TDEDIR" && kde_sharedirs="$TDEDIR/share $kde_sharedirs"
             AC_FIND_FILE(apps/ksgmltools2/customization/kde-chunk.xsl, $kde_sharedirs, KDE_XSL_STYLESHEET)
 	    if test "$KDE_XSL_STYLESHEET" = "NO"; then
 		KDE_XSL_STYLESHEET=""
@@ -621,9 +621,9 @@ AC_DEFUN([KDE_SUBST_PROGRAMS],
         if test -x "$KDECONFIG"; then # it can be "compiled"
           kde_libs_prefix=`$KDECONFIG --prefix`
           if test -z "$kde_libs_prefix" || test ! -x "$kde_libs_prefix"; then
-               AC_MSG_ERROR([$KDECONFIG --prefix outputed the non existant prefix '$kde_libs_prefix' for kdelibs.
+               AC_MSG_ERROR([$KDECONFIG --prefix outputed the non existant prefix '$kde_libs_prefix' for tdelibs.
                           This means it has been moved since you installed it.
-                          This won't work. Please recompile kdelibs for the new prefix.
+                          This won't work. Please recompile tdelibs for the new prefix.
                           ])
            fi
            kde_libs_htmldir=`$KDECONFIG --install html --expandvars`
@@ -705,7 +705,7 @@ AC_SUBST(kde_templatesdir)
 AC_SUBST(kde_servicesdir)
 AC_SUBST(kde_servicetypesdir)
 AC_SUBST(kde_moduledir)
-AC_SUBST(kdeinitdir, '$(kde_moduledir)')
+AC_SUBST(tdeinitdir, '$(kde_moduledir)')
 AC_SUBST(kde_styledir)
 AC_SUBST(kde_widgetdir)
 if test "$kde_qtver" = 1; then
@@ -922,7 +922,7 @@ mips-sgi-irix6*)
     ac_x_includes="."
   fi
   if test -z "$ac_x_libraries"; then
-    ac_x_libraries="/usr/lib${kdelibsuff}"
+    ac_x_libraries="/usr/lib${tdelibsuff}"
   fi
 esac
 #from now on we use our own again
@@ -1045,7 +1045,7 @@ elif test "$kde_use_qt_emb" = "yes"; then
   x_includes=""
   x_libraries=""
 elif test "$kde_use_qt_mac" = "yes"; then
-  dnl We're using QT/Mac (I use QT_MAC so that qglobal.h doesn't *have* to
+  dnl We're using QT/Mac (I use QT_MAC so that ntqglobal.h doesn't *have* to
   dnl be included to get the information) --Sam
   CXXFLAGS="$CXXFLAGS -DQT_MAC -no-cpp-precomp"
   CFLAGS="$CFLAGS -DQT_MAC -no-cpp-precomp"
@@ -1077,19 +1077,19 @@ AC_DEFUN([KDE_PRINT_QT_PROGRAM],
 AC_REQUIRE([KDE_USE_QT])
 cat > conftest.$ac_ext <<EOF
 #include "confdefs.h"
-#include <qglobal.h>
-#include <qapplication.h>
+#include <ntqglobal.h>
+#include <ntqapplication.h>
 EOF
 if test "$kde_qtver" = "2"; then
 cat >> conftest.$ac_ext <<EOF
-#include <qevent.h>
-#include <qstring.h>
-#include <qstyle.h>
+#include <ntqevent.h>
+#include <ntqstring.h>
+#include <ntqstyle.h>
 EOF
 
 if test $kde_qtsubver -gt 0; then
 cat >> conftest.$ac_ext <<EOF
-#if QT_VERSION < 210
+#if TQT_VERSION < 210
 #error 1
 #endif
 EOF
@@ -1098,8 +1098,8 @@ fi
 
 if test "$kde_qtver" = "3"; then
 cat >> conftest.$ac_ext <<EOF
-#include <qcursor.h>
-#include <qstylefactory.h>
+#include <ntqcursor.h>
+#include <ntqstylefactory.h>
 #include <private/qucomextra_p.h>
 EOF
 fi
@@ -1182,22 +1182,22 @@ fi
 if test -z "$3"; then
    if test $kde_qtver = 3; then
      if test $kde_qtsubver -gt 0; then
-       kde_qt_verstring="QT_VERSION >= 0x03@VER@00"
+       kde_qt_verstring="TQT_VERSION >= 0x03@VER@00"
        qtsubver=`echo "00$kde_qtsubver" | sed -e 's,.*\(..\)$,\1,'`
        kde_qt_verstring=`echo $kde_qt_verstring | sed -e "s,@VER@,$qtsubver,"`
      else
-       kde_qt_verstring="QT_VERSION >= 300"
+       kde_qt_verstring="TQT_VERSION >= 300"
      fi
    fi
    if test $kde_qtver = 2; then
      if test $kde_qtsubver -gt 0; then
-       kde_qt_verstring="QT_VERSION >= 222"
+       kde_qt_verstring="TQT_VERSION >= 222"
      else
-       kde_qt_verstring="QT_VERSION >= 200"
+       kde_qt_verstring="TQT_VERSION >= 200"
      fi
    fi
    if test $kde_qtver = 1; then
-    kde_qt_verstring="QT_VERSION >= 142 && QT_VERSION < 200"
+    kde_qt_verstring="TQT_VERSION >= 142 && TQT_VERSION < 200"
    fi
 else
    kde_qt_verstring="$3"
@@ -1303,7 +1303,7 @@ AC_ARG_ENABLE(
 USING_QT_MT=""
 
 dnl ------------------------------------------------------------------------
-dnl If we not get --disable-qt-mt then adjust some vars for the host.
+dnl If we not get --disable-tqt-mt then adjust some vars for the host.
 dnl ------------------------------------------------------------------------
 
 KDE_MT_LDFLAGS=
@@ -1366,7 +1366,7 @@ dnl ------------------------------------------------------------
 fi
 
 dnl ------------------------------------------------------------------------
-dnl If we got --enable-qt-mt then adjust the Qt library name for the host.
+dnl If we got --enable-tqt-mt then adjust the Qt library name for the host.
 dnl ------------------------------------------------------------------------
 
 if test "x$kde_use_qt_mt" = "xyes"; then
@@ -1406,7 +1406,7 @@ qt_includes=""
 AC_ARG_WITH(qt-dir,
     AC_HELP_STRING([--with-qt-dir=DIR],[where the root of Qt is installed ]),
     [  ac_qt_includes="$withval"/include
-       ac_qt_libraries="$withval"/lib${kdelibsuff}
+       ac_qt_libraries="$withval"/lib${tdelibsuff}
        ac_qt_bindir="$withval"/bin
     ])
 
@@ -1437,9 +1437,9 @@ if test ! "$ac_qt_includes" = "NO"; then
 fi
 
 if test "$kde_qtver" != "1"; then
-  kde_qt_header=qstyle.h
+  kde_qt_header=ntqstyle.h
 else
-  kde_qt_header=qglobal.h
+  kde_qt_header=ntqglobal.h
 fi
 
 AC_FIND_FILE($kde_qt_header, $qt_incdirs, qt_incdir)
@@ -1447,7 +1447,7 @@ ac_qt_includes="$qt_incdir"
 
 qt_libdirs=""
 for dir in $kde_qt_dirs; do
-   qt_libdirs="$qt_libdirs $dir/lib${kdelibsuff} $dir"
+   qt_libdirs="$qt_libdirs $dir/lib${tdelibsuff} $dir"
 done
 qt_libdirs="$QTLIB $qt_libdirs /usr/X11R6/lib /usr/lib /usr/local/qt/lib $x_libraries"
 if test ! "$ac_qt_libraries" = "NO"; then
@@ -1631,7 +1631,7 @@ rm -f actest.ui actest.cpp
 
 AC_MSG_RESULT([$kde_cv_uic_plugins])
 if test "$kde_cv_uic_plugins" != yes; then
-	AC_MSG_ERROR([you need to install kdelibs first.])
+	AC_MSG_ERROR([you need to install tdelibs first.])
 fi
 fi
 ])
@@ -1742,16 +1742,16 @@ AC_CACHE_VAL(ac_cv_have_kde,
 
 if test "$kde_qtver" = 1; then
   kde_check_header="ksock.h"
-  kde_check_lib="libkdecore.la"
+  kde_check_lib="libtdecore.la"
 else
   kde_check_header="ksharedptr.h"
-  kde_check_lib="libkio.la"
+  kde_check_lib="libtdeio.la"
 fi
 
 if test -z "$1"; then
 
-kde_incdirs="/usr/lib/kde/include /usr/local/kde/include /usr/local/include /usr/kde/include /usr/include/kde /usr/include /opt/kde3/include /opt/kde/include $x_includes $qt_includes"
-test -n "$KDEDIR" && kde_incdirs="$KDEDIR/include $KDEDIR/include/kde $KDEDIR $kde_incdirs"
+kde_incdirs="/usr/lib/kde/include /usr/local/kde/include /usr/local/include /usr/kde/include /usr/include/tde /usr/include /opt/kde3/include /opt/kde/include $x_includes $qt_includes"
+test -n "$TDEDIR" && kde_incdirs="$TDEDIR/include $TDEDIR/include/tde $TDEDIR $kde_incdirs"
 kde_incdirs="$ac_kde_includes $kde_incdirs"
 AC_FIND_FILE($kde_check_header, $kde_incdirs, kde_incdir)
 ac_kde_includes="$kde_incdir"
@@ -1762,15 +1762,15 @@ in the prefix, you've chosen, are no KDE headers installed. This will fail.
 So, check this please and use another prefix!])
 fi
 
-kde_libdirs="/usr/lib/kde/lib${kdelibsuff} /usr/local/kde/lib${kdelibsuff} /usr/kde/lib${kdelibsuff} /usr/lib${kdelibsuff}/kde /usr/lib${kdelibsuff}/kde3 /usr/lib${kdelibsuff} /usr/X11R6/lib${kdelibsuff} /usr/local/lib${kdelibsuff} /opt/kde3/lib${kdelibsuff} /opt/kde/lib${kdelibsuff} /usr/X11R6/kde/lib${kdelibsuff}"
-test -n "$KDEDIR" && kde_libdirs="$KDEDIR/lib${kdelibsuff} $KDEDIR $kde_libdirs"
+kde_libdirs="/usr/lib/kde/lib${tdelibsuff} /usr/local/kde/lib${tdelibsuff} /usr/kde/lib${tdelibsuff} /usr/lib${tdelibsuff}/kde /usr/lib${tdelibsuff}/kde3 /usr/lib${tdelibsuff} /usr/X11R6/lib${tdelibsuff} /usr/local/lib${tdelibsuff} /opt/kde3/lib${tdelibsuff} /opt/kde/lib${tdelibsuff} /usr/X11R6/kde/lib${tdelibsuff}"
+test -n "$TDEDIR" && kde_libdirs="$TDEDIR/lib${tdelibsuff} $TDEDIR $kde_libdirs"
 kde_libdirs="$ac_kde_libraries $libdir $kde_libdirs"
 AC_FIND_FILE($kde_check_lib, $kde_libdirs, kde_libdir)
 ac_kde_libraries="$kde_libdir"
 
 kde_widgetdir=NO
 dnl this might be somewhere else
-AC_FIND_FILE("kde3/plugins/designer/kdewidgets.la", $kde_libdirs, kde_widgetdir)
+AC_FIND_FILE("kde3/plugins/designer/tdewidgets.la", $kde_libdirs, kde_widgetdir)
 
 if test -n "$ac_kde_libraries" && test ! -r "$ac_kde_libraries/$kde_check_lib"; then
 AC_MSG_ERROR([
@@ -1778,10 +1778,10 @@ in the prefix, you've chosen, are no KDE libraries installed. This will fail.
 So, check this please and use another prefix!])
 fi
 
-if test -n "$kde_widgetdir" && test ! -r "$kde_widgetdir/kde3/plugins/designer/kdewidgets.la"; then
+if test -n "$kde_widgetdir" && test ! -r "$kde_widgetdir/kde3/plugins/designer/tdewidgets.la"; then
 AC_MSG_ERROR([
 I can't find the designer plugins. These are required and should have been installed
-by kdelibs])
+by tdelibs])
 fi
 
 if test -n "$kde_widgetdir"; then
@@ -1936,20 +1936,20 @@ cat > conftest.$ac_ext <<EOF
 #include <kapp.h>
 
 int main() {
-    printf("kde_htmldir=\\"%s\\"\n", KApplication::kde_htmldir().data());
-    printf("kde_appsdir=\\"%s\\"\n", KApplication::kde_appsdir().data());
-    printf("kde_icondir=\\"%s\\"\n", KApplication::kde_icondir().data());
-    printf("kde_sounddir=\\"%s\\"\n", KApplication::kde_sounddir().data());
-    printf("kde_datadir=\\"%s\\"\n", KApplication::kde_datadir().data());
-    printf("kde_locale=\\"%s\\"\n", KApplication::kde_localedir().data());
-    printf("kde_cgidir=\\"%s\\"\n", KApplication::kde_cgidir().data());
-    printf("kde_confdir=\\"%s\\"\n", KApplication::kde_configdir().data());
-    printf("kde_mimedir=\\"%s\\"\n", KApplication::kde_mimedir().data());
-    printf("kde_toolbardir=\\"%s\\"\n", KApplication::kde_toolbardir().data());
+    printf("kde_htmldir=\\"%s\\"\n", TDEApplication::kde_htmldir().data());
+    printf("kde_appsdir=\\"%s\\"\n", TDEApplication::kde_appsdir().data());
+    printf("kde_icondir=\\"%s\\"\n", TDEApplication::kde_icondir().data());
+    printf("kde_sounddir=\\"%s\\"\n", TDEApplication::kde_sounddir().data());
+    printf("kde_datadir=\\"%s\\"\n", TDEApplication::kde_datadir().data());
+    printf("kde_locale=\\"%s\\"\n", TDEApplication::kde_localedir().data());
+    printf("kde_cgidir=\\"%s\\"\n", TDEApplication::kde_cgidir().data());
+    printf("kde_confdir=\\"%s\\"\n", TDEApplication::kde_configdir().data());
+    printf("kde_mimedir=\\"%s\\"\n", TDEApplication::kde_mimedir().data());
+    printf("kde_toolbardir=\\"%s\\"\n", TDEApplication::kde_toolbardir().data());
     printf("kde_wallpaperdir=\\"%s\\"\n",
-	KApplication::kde_wallpaperdir().data());
-    printf("kde_bindir=\\"%s\\"\n", KApplication::kde_bindir().data());
-    printf("kde_partsdir=\\"%s\\"\n", KApplication::kde_partsdir().data());
+	TDEApplication::kde_wallpaperdir().data());
+    printf("kde_bindir=\\"%s\\"\n", TDEApplication::kde_bindir().data());
+    printf("kde_partsdir=\\"%s\\"\n", TDEApplication::kde_partsdir().data());
     printf("kde_servicesdir=\\"/tmp/dummy\\"\n");
     printf("kde_servicetypesdir=\\"/tmp/dummy\\"\n");
     printf("kde_moduledir=\\"/tmp/dummy\\"\n");
@@ -1987,11 +1987,11 @@ AC_CACHE_VAL(kde_cv_have_kdeqtaddon,
  kde_cxxflags_safe="$CXXFLAGS"
 
  LIBS="-lkde-qt-addon $LIBQT $LIBS"
- CXXFLAGS="$CXXFLAGS -I$prefix/include -I$prefix/include/kde $all_includes"
+ CXXFLAGS="$CXXFLAGS -I$prefix/include -I$prefix/include/tde $all_includes"
  LDFLAGS="$LDFLAGS $all_libraries $USER_LDFLAGS"
 
  AC_TRY_LINK([
-   #include <qdom.h>
+   #include <ntqdom.h>
  ],
  [
    QDomDocument doc;
@@ -2020,39 +2020,39 @@ AC_DEFUN([KDE_CREATE_LIBS_ALIASES],
    AC_REQUIRE([K_PATH_X])
 
 if test $kde_qtver = 3; then
-   AC_SUBST(LIB_KDECORE, "-lkdecore")
-   AC_SUBST(LIB_KDEUI, "-lkdeui")
-   AC_SUBST(LIB_KIO, "-lkio")
+   AC_SUBST(LIB_TDECORE, "-ltdecore")
+   AC_SUBST(LIB_TDEUI, "-ltdeui")
+   AC_SUBST(LIB_TDEIO, "-ltdeio")
    AC_SUBST(LIB_SMB, "-lsmb")
    AC_SUBST(LIB_KAB, "-lkab")
-   AC_SUBST(LIB_KABC, "-lkabc")
-   AC_SUBST(LIB_KHTML, "-lkhtml")
-   AC_SUBST(LIB_KSPELL, "-lkspell")
-   AC_SUBST(LIB_KPARTS, "-lkparts")
-   AC_SUBST(LIB_KDEPRINT, "-lkdeprint")
-   AC_SUBST(LIB_KUTILS, "-lkutils")
-   AC_SUBST(LIB_KDEPIM, "-lkdepim")
+   AC_SUBST(LIB_KABC, "-ltdeabc")
+   AC_SUBST(LIB_TDEHTML, "-ltdehtml")
+   AC_SUBST(LIB_TDESPELL, "-ltdespell")
+   AC_SUBST(LIB_TDEPARTS, "-ltdeparts")
+   AC_SUBST(LIB_TDEPRINT, "-ltdeprint")
+   AC_SUBST(LIB_TDEUTILS, "-ltdeutils")
+   AC_SUBST(LIB_TDEPIM, "-ltdepim")
 # these are for backward compatibility
-   AC_SUBST(LIB_KSYCOCA, "-lkio")
-   AC_SUBST(LIB_KFILE, "-lkio")
+   AC_SUBST(LIB_TDESYCOCA, "-ltdeio")
+   AC_SUBST(LIB_KFILE, "-ltdeio")
 elif test $kde_qtver = 2; then
-   AC_SUBST(LIB_KDECORE, "-lkdecore")
-   AC_SUBST(LIB_KDEUI, "-lkdeui")
-   AC_SUBST(LIB_KIO, "-lkio")
-   AC_SUBST(LIB_KSYCOCA, "-lksycoca")
+   AC_SUBST(LIB_TDECORE, "-ltdecore")
+   AC_SUBST(LIB_TDEUI, "-ltdeui")
+   AC_SUBST(LIB_TDEIO, "-ltdeio")
+   AC_SUBST(LIB_TDESYCOCA, "-ltdesycoca")
    AC_SUBST(LIB_SMB, "-lsmb")
-   AC_SUBST(LIB_KFILE, "-lkfile")
+   AC_SUBST(LIB_KFILE, "-ltdefile")
    AC_SUBST(LIB_KAB, "-lkab")
-   AC_SUBST(LIB_KHTML, "-lkhtml")
-   AC_SUBST(LIB_KSPELL, "-lkspell")
-   AC_SUBST(LIB_KPARTS, "-lkparts")
-   AC_SUBST(LIB_KDEPRINT, "-lkdeprint")
+   AC_SUBST(LIB_TDEHTML, "-ltdehtml")
+   AC_SUBST(LIB_TDESPELL, "-ltdespell")
+   AC_SUBST(LIB_TDEPARTS, "-ltdeparts")
+   AC_SUBST(LIB_TDEPRINT, "-ltdeprint")
 else
-   AC_SUBST(LIB_KDECORE, "-lkdecore -lXext $(LIB_QT)")
-   AC_SUBST(LIB_KDEUI, "-lkdeui $(LIB_KDECORE)")
-   AC_SUBST(LIB_KFM, "-lkfm $(LIB_KDECORE)")
-   AC_SUBST(LIB_KFILE, "-lkfile $(LIB_KFM) $(LIB_KDEUI)")
-   AC_SUBST(LIB_KAB, "-lkab $(LIB_KIMGIO) $(LIB_KDECORE)")
+   AC_SUBST(LIB_TDECORE, "-ltdecore -lXext $(LIB_QT)")
+   AC_SUBST(LIB_TDEUI, "-ltdeui $(LIB_TDECORE)")
+   AC_SUBST(LIB_KFM, "-lkfm $(LIB_TDECORE)")
+   AC_SUBST(LIB_KFILE, "-ltdefile $(LIB_KFM) $(LIB_TDEUI)")
+   AC_SUBST(LIB_KAB, "-lkab $(LIB_KIMGIO) $(LIB_TDECORE)")
 fi
 ])
 
@@ -2117,7 +2117,7 @@ if test "x$kde_cv_func_$1" = xyes; then
 else
   case "$1" in
 	setenv|unsetenv|usleep|random|srandom|seteuid|mkstemps|mkstemp|revoke|vsnprintf|strlcpy|strlcat)
-		kde_cv_proto_$1="yes - in libkdefakes"
+		kde_cv_proto_$1="yes - in libtdefakes"
 		;;
 	*)
 		kde_cv_proto_$1=unknown
@@ -2398,7 +2398,7 @@ if eval "test \"`echo $ac_cv_lib_gif`\" = yes"; then
   AC_MSG_RESULT(yes)
   AC_DEFINE_UNQUOTED(HAVE_LIBGIF, 1, [Define if you have libgif])
 else
-  AC_MSG_ERROR(You need giflib30. Please install the kdesupport package)
+  AC_MSG_ERROR(You need giflib30. Please install the tdesupport package)
 fi
 ])
 
@@ -2462,7 +2462,7 @@ AC_FIND_FILE(jpeglib.h, $jpeg_incdirs, jpeg_incdir)
 test "x$jpeg_incdir" = xNO && jpeg_incdir=
 
 dnl if headers _and_ libraries are missing, this is no error, and we
-dnl continue with a warning (the user will get no jpeg support in khtml)
+dnl continue with a warning (the user will get no jpeg support in tdehtml)
 dnl if only one is missing, it means a configuration error, but we still
 dnl only warn
 if test -n "$jpeg_incdir" && test -n "$LIBJPEG" ; then
@@ -2510,7 +2510,7 @@ LIBS=`echo $LIBS | sed "s/$LIBJPEG//"`
 ac_save_CXXFLAGS="$CXXFLAGS"
 CXXFLAGS="$CXXFLAGS $all_includes $USER_INCLUDES"
 AC_TRY_LINK(
-[#include <qapplication.h>],
+[#include <ntqapplication.h>],
             [
             int argc;
             char** argv;
@@ -3078,26 +3078,26 @@ AC_SUBST(AUTOCONF,'$(SHELL) $(top_srcdir)/admin/cvs.sh configure || touch config
 
 AC_DEFUN([KDE_CHECK_LIB64],
 [
-    kdelibsuff=no
+    tdelibsuff=no
     AC_ARG_ENABLE(libsuffix,
         AC_HELP_STRING([--enable-libsuffix],
             [/lib directory suffix (64,32,none[=default])]),
-            kdelibsuff=$enableval)
+            tdelibsuff=$enableval)
     # TODO: add an auto case that compiles a little C app to check
     # where the glibc is
-    if test "$kdelibsuff" = "no"; then
-       kdelibsuff=
+    if test "$tdelibsuff" = "no"; then
+       tdelibsuff=
     fi
-    if test -z "$kdelibsuff"; then
+    if test -z "$tdelibsuff"; then
         AC_MSG_RESULT([not using lib directory suffix])
         AC_DEFINE(KDELIBSUFF, [""], Suffix for lib directories)
     else
         if test "$libdir" = '${exec_prefix}/lib'; then
-            libdir="$libdir${kdelibsuff}"
+            libdir="$libdir${tdelibsuff}"
             AC_SUBST([libdir], ["$libdir"])  dnl ugly hack for lib64 platforms
         fi
-        AC_DEFINE_UNQUOTED(KDELIBSUFF, ["\"${kdelibsuff}\""], Suffix for lib directories)
-        AC_MSG_RESULT([using lib directory suffix $kdelibsuff])
+        AC_DEFINE_UNQUOTED(KDELIBSUFF, ["\"${tdelibsuff}\""], Suffix for lib directories)
+        AC_MSG_RESULT([using lib directory suffix $tdelibsuff])
     fi
 ])
 
@@ -3114,7 +3114,7 @@ AC_CANONICAL_SYSTEM
 AC_ARG_PROGRAM
 AM_INIT_AUTOMAKE($1, $2)
 AM_DISABLE_LIBRARIES
-AC_PREFIX_DEFAULT(${KDEDIR:-/usr/local/kde})
+AC_PREFIX_DEFAULT(${TDEDIR:-/usr/local/kde})
 AC_CHECK_COMPILERS
 KDE_PROG_LIBTOOL
 AM_KDE_WITH_NLS
@@ -4088,7 +4088,7 @@ fi
 
 PYTHONINC=-I$python_incdir
 
-python_libdirs="$ac_python_dir/lib$kdelibsuff /usr/lib$kdelibsuff /usr/local /usr/lib$kdelibsuff $kde_extra_libs"
+python_libdirs="$ac_python_dir/lib$tdelibsuff /usr/lib$tdelibsuff /usr/local /usr/lib$tdelibsuff $kde_extra_libs"
 AC_FIND_FILE(libpython$version.so, $python_libdirs, python_libdir)
 if test ! -r $python_libdir/libpython$version.so; then
   AC_FIND_FILE(libpython$version.a, $python_libdirs, python_libdir)
@@ -4217,7 +4217,7 @@ CXXFLAGS="$CXXFLAGS -I$qt_incdir $all_includes"
 AC_TRY_RUN(dnl
 [
 #include <qimageio.h>
-#include <qstring.h>
+#include <ntqstring.h>
 int main() {
 		QString t = "hallo";
 		t.fill('t');
@@ -4477,8 +4477,8 @@ AC_DEFUN([KDE_CONF_FILES],
 AC_DEFUN([KDE_SET_PREFIX],
 [
   unset CDPATH
-  dnl make $KDEDIR the default for the installation
-  AC_PREFIX_DEFAULT(${KDEDIR:-/usr/local/kde})
+  dnl make $TDEDIR the default for the installation
+  AC_PREFIX_DEFAULT(${TDEDIR:-/usr/local/kde})
 
   if test "x$prefix" = "xNONE"; then
     prefix=$ac_default_prefix
@@ -5001,7 +5001,7 @@ if test "${with_qt_dir+set}" = set; then
   kde_qtdir="$with_qt_dir"
 fi
 
-AC_FIND_FILE(qsql.html, [ $kde_qtdir/doc/html $QTDIR/doc/html /usr/share/doc/packages/qt3/html /usr/lib/qt/doc /usr/lib/qt3/doc /usr/lib/qt3/doc/html /usr/doc/qt3/html /usr/doc/qt3 /usr/share/doc/qt3-doc /usr/share/qt3/doc/html /usr/X11R6/share/doc/qt/html ], QTDOCDIR)
+AC_FIND_FILE(ntqsql.html, [ $kde_qtdir/doc/html $QTDIR/doc/html /usr/share/doc/packages/qt3/html /usr/lib/qt/doc /usr/lib/qt3/doc /usr/lib/qt3/doc/html /usr/doc/qt3/html /usr/doc/qt3 /usr/share/doc/qt3-doc /usr/share/qt3/doc/html /usr/X11R6/share/doc/qt/html ], QTDOCDIR)
 AC_MSG_RESULT($QTDOCDIR)
 
 AC_SUBST(QTDOCDIR)
@@ -5022,7 +5022,7 @@ AC_SUBST(DOXYGEN_PROJECT_NAME)
 AC_SUBST(DOXYGEN_PROJECT_NUMBER)
 
 KDE_HAS_DOXYGEN=no
-if test -n "$DOXYGEN" && test -x "$DOXYGEN" && test -f $QTDOCDIR/qsql.html; then
+if test -n "$DOXYGEN" && test -x "$DOXYGEN" && test -f $QTDOCDIR/ntqsql.html; then
   KDE_HAS_DOXYGEN=yes
 fi
 AC_SUBST(KDE_HAS_DOXYGEN)
@@ -5128,7 +5128,7 @@ ssl_includes=""
 AC_ARG_WITH(ssl-dir,
     AC_HELP_STRING([--with-ssl-dir=DIR],[where the root of OpenSSL is installed]),
     [  ac_ssl_includes="$withval"/include
-       ac_ssl_libraries="$withval"/lib$kdelibsuff
+       ac_ssl_libraries="$withval"/lib$tdelibsuff
     ])
 
 want_ssl=yes
@@ -5148,7 +5148,7 @@ AC_CACHE_VAL(ac_cv_have_ssl,
   AC_FIND_FILE(openssl/ssl.h, $ssl_incdirs, ssl_incdir)
   ac_ssl_includes="$ssl_incdir"
 
-  ssl_libdirs="/usr/lib$kdelibsuff /usr/local/lib$kdelibsuff /usr/ssl/lib$kdelibsuff /usr/local/ssl/lib$kdelibsuff $libdir $prefix/lib$kdelibsuff $exec_prefix/lib$kdelibsuff $kde_extra_libs"
+  ssl_libdirs="/usr/lib$tdelibsuff /usr/local/lib$tdelibsuff /usr/ssl/lib$tdelibsuff /usr/local/ssl/lib$tdelibsuff $libdir $prefix/lib$tdelibsuff $exec_prefix/lib$tdelibsuff $kde_extra_libs"
   if test ! "$ac_ssl_libraries" = "NO"; then
     ssl_libdirs="$ac_ssl_libraries $ssl_libdirs"
   fi

@@ -24,9 +24,9 @@
 #include "statistics.h"
 
 #include "mxd.h"
-#include <klocale.h>
-#include <qtimer.h>
-#include <kapplication.h>
+#include <tdelocale.h>
+#include <ntqtimer.h>
+#include <tdeapplication.h>
 
 Statistics::Statistics( MxDialer* parent, const char *name )
 		: StatisticsBase( parent, name )
@@ -34,7 +34,7 @@ Statistics::Statistics( MxDialer* parent, const char *name )
 	setCaption( i18n( "Statistics for %1" ).arg( parent->interface() ) );
 	update();
 
-	mTimer = new QTimer( this );
+	mTimer = new TQTimer( this );
 	connect( mTimer, SIGNAL( timeout() ), this, SLOT( update() ) );
 }
 
@@ -49,10 +49,10 @@ void Statistics::update()
 	mByteSpeedRx->setText( byteFormat( parent->byteSpeedRx(), 1, " B" )+"/s" );
 	mByteSpeedTx->setText( byteFormat( parent->byteSpeedTx(), 1, " B" )+"/s" );
 
-	mPRx->setText( QString::number( parent->totalPktRx() ) );
-	mPTx->setText( QString::number( parent->totalPktTx() ) );
-	mPktSpeedRx->setText( QString::number( parent->pktSpeedRx(), 'f', 1 )+"pkts/s" );
-	mPktSpeedTx->setText( QString::number( parent->pktSpeedTx(), 'f', 1 )+"pkts/s" );
+	mPRx->setText( TQString::number( parent->totalPktRx() ) );
+	mPTx->setText( TQString::number( parent->totalPktTx() ) );
+	mPktSpeedRx->setText( TQString::number( parent->pktSpeedRx(), 'f', 1 )+"pkts/s" );
+	mPktSpeedTx->setText( TQString::number( parent->pktSpeedTx(), 'f', 1 )+"pkts/s" );
 }
 
 void Statistics::show()
